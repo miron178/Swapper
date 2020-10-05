@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 	private float rotationSpeed = 5f;
 	[SerializeField]
 	private bool active = false;
+	private bool lastActive = false;
+	private Component[] meshRenderer;
 
 	//layers
 	private int groundLayer;
@@ -46,30 +48,22 @@ public class Player : MonoBehaviour
 		SwapLayer = LayerMask.NameToLayer("Swappable");
 		wallLayer = LayerMask.NameToLayer("Wall");
 
+		meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
 	}
 
 	void FixedUpdate() {
-		float horizontal =  Input.GetAxis("Horizontal"); //movment
-		float vertical =  Input.GetAxis("Vertical"); //movment
+		if (active != lastActive) {
+			lastActive = active;
 
-		float jump = jumpForce * Input.GetAxis("Jump"); //jump
-		float interact = Input.GetAxis("Interact"); //swap
-		if (active) {
-
-		
-		if (horizontal != 0f || vertical != 0f) {
-			Rotate(horizontal, vertical);
-			Move(horizontal, vertical);
+			foreach (MeshRenderer renderer in meshRenderer) {
+				renderer.material = active?green:yellow;
+			}
 		}
 
-		//Jump
-		bool grounded = Physics.Linecast(transform.position, jumpCheck.transform.position, (1 << groundLayer)); //checks if player is grounded
-																									/*~ == one's compliment*/
-																									/*1 << groundLayer == 1<<8*/
-																									/*1<<8 == 11111111 11111111 11111110 11111111*/
-		if (grounded && canJump) {
-  			Debug.Log("why");
-			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+		if (active) {
+			float horizontal = Input.GetAxis("Horizontal"); //movment
+			float vertical = Input.GetAxis("Vertical"); //movment
+
 			float jump = jumpForce * Input.GetAxis("Jump"); //jump
 			float interact = Input.GetAxis("Interact"); //swap
 
@@ -87,8 +81,6 @@ public class Player : MonoBehaviour
 				//Debug.Log("why");
 				rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 			}
-		}
-		else {
 		}
 	}
 
