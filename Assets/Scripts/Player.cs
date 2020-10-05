@@ -64,6 +64,24 @@ public class Player : MonoBehaviour
 		if (grounded && canJump) {
   			Debug.Log("why");
 			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+			float jump = jumpForce * Input.GetAxis("Jump"); //jump
+			float interact = Input.GetAxis("Interact"); //swap
+
+			if (horizontal != 0f || active && vertical != 0f) {
+				Rotate(horizontal, vertical);
+				Move(horizontal, vertical);
+			}
+
+			//Jump
+			bool grounded = Physics.Linecast(transform.position, jumpCheck.transform.position, (1 << groundLayer)); //checks if player is grounded
+			/*~ == one's compliment*/
+			/*1 << groundLayer == 1<<8*/
+			/*1<<8 == 11111111 11111111 11111110 11111111*/
+			if (grounded && canJump) {
+				//Debug.Log("why");
+				rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+			}
+		}
 		else {
 		}
 	}
