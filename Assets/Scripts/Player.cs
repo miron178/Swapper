@@ -31,6 +31,12 @@ public class Player : MonoBehaviour
 	private GameObject objectInRange = null;
 	private GameObject swapped = null;
 
+	//materials
+	[SerializeField]
+	private Material green;
+	[SerializeField]
+	private Material yellow;
+
 	void Start() {
 		rb = GetComponent<Rigidbody>(); //used later to make code more readable
 
