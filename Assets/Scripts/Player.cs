@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 	private bool canJump = false;
 	[SerializeField]
 	private float rotationSpeed = 5f;
+	[SerializeField]
+	private bool active = false;
 
 	//layers
 	private int groundLayer;
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
 
 		float jump = jumpForce * Input.GetAxis("Jump"); //jump
 		float interact = Input.GetAxis("Interact"); //swap
+		if (active) {
 
 		
 		if (horizontal != 0f || vertical != 0f) {
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
 		if (grounded && canJump) {
   			Debug.Log("why");
 			rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
+		else {
 		}
 	}
 
