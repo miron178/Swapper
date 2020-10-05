@@ -1141,7 +1141,7 @@ GameObject:
   - component: {fileID: 878183716}
   - component: {fileID: 878183715}
   - component: {fileID: 878183714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Vent '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
