@@ -2146,7 +2146,7 @@ MonoBehaviour:
   canJump: 1
   rotationSpeed: 8
   active: 0
-  Spawn: {fileID: 0}
+  spawnPoint: {fileID: 787040999}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &1383848172
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   canJump: 1
   rotationSpeed: 5
   active: 0
-  Spawn: {fileID: 0}
+  spawnPoint: {fileID: 670828764}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &1576178684
@@ -2821,7 +2821,7 @@ MonoBehaviour:
   canJump: 0
   rotationSpeed: 1
   active: 1
-  Spawn: {fileID: 0}
+  spawnPoint: {fileID: 0}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &2003261292
