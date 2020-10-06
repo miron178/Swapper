@@ -2147,6 +2147,8 @@ MonoBehaviour:
   rotationSpeed: 8
   active: 0
   spawnPoint: {fileID: 787040999}
+  slimePrefab: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
+    type: 3}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &1383848172
@@ -2492,6 +2494,8 @@ MonoBehaviour:
   rotationSpeed: 5
   active: 0
   spawnPoint: {fileID: 670828764}
+  slimePrefab: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
+    type: 3}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &1576178684
@@ -2822,6 +2826,7 @@ MonoBehaviour:
   rotationSpeed: 1
   active: 1
   spawnPoint: {fileID: 0}
+  slimePrefab: {fileID: 0}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!65 &2003261292

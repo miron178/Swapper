@@ -39,6 +39,8 @@ public class Player : MonoBehaviour
 	//privates for slime spawn
 	[SerializeField]
 	private Transform spawnPoint;
+	[SerializeField]
+	private GameObject slimePrefab;
 
 	//materials
 	[SerializeField]
