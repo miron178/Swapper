@@ -121,12 +121,18 @@ public class Player : MonoBehaviour
 	private void Swap() {
 		Player playerInRange = objectInRange.GetComponent<Player>();
 		playerInRange.active = true;
-		this.active = false;
-		objectInRange = null;
+
+		if (this.gameObject.layer != LayerMask.NameToLayer("Slime")) {
+			this.active = false;
+			objectInRange = null;
+		} else {
+			Destroy(this.gameObject);
+		}
 	}
 
 	private void SpawnSlime() {
 		GameObject slime = Instantiate(slimePrefab, spawnPoint.position, spawnPoint.rotation);
+		this.active = false;
 	}
 
 	void LateUpdate() {
