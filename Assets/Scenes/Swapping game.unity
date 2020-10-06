@@ -2146,7 +2146,7 @@ MonoBehaviour:
   canJump: 1
   rotationSpeed: 8
   active: 0
-  spawnPoint: {fileID: 787040999}
+  spawnPoint: {fileID: 382158567}
   slimePrefab: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
     type: 3}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}

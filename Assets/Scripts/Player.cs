@@ -74,7 +74,10 @@ public class Player : MonoBehaviour
 			float vertical = Input.GetAxis("Vertical"); //movment
 
 			float jump = jumpForce * Input.GetAxis("Jump"); //jump
+
 			float interact = Input.GetAxis("Interact"); //swap
+
+			float spawn = Input.GetAxis("Spawn"); //spawn
 
 			if (horizontal != 0f || active && vertical != 0f) {
 				Rotate(horizontal, vertical);
@@ -94,9 +97,12 @@ public class Player : MonoBehaviour
 			if (interact > 0 && objectInRange && !interactRelease) {
 				Swap();
 				interactRelease = true;
-			} 
-			else if (interact == 0){
+			} else if (interact == 0) {
 				interactRelease = false;
+			}
+
+			if (spawn > 0) {
+				SpawnSlime();
 			}
 		}
 	}
@@ -117,6 +123,10 @@ public class Player : MonoBehaviour
 		playerInRange.active = true;
 		this.active = false;
 		objectInRange = null;
+	}
+
+	private void SpawnSlime() {
+		GameObject slime = Instantiate(slimePrefab, spawnPoint.position, spawnPoint.rotation);
 	}
 
 	void LateUpdate() {
