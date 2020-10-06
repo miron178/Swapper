@@ -36,7 +36,11 @@ public class Player : MonoBehaviour
 	//privates for swaps
 	private GameObject objectInRange = null;
 	private GameObject swapped = null;
+	private bool interactRelease = false;
+
 	//privates for slime spawn
+	[SerializeField]
+	private GameObject Spawn;
 
 	//materials
 	[SerializeField]
@@ -86,7 +90,33 @@ public class Player : MonoBehaviour
 				//Debug.Log("why");
 				rb.AddRelativeForce(Vector3.up * jump * Time.fixedDeltaTime);
 			}
+
+			if (interact > 0 && objectInRange && !interactRelease) {
+				Swap();
+				interactRelease = true;
+			} 
+			else if (interact == 0){
+				interactRelease = false;
+			}
 		}
+	}
+
+
+	private void OnTriggerEnter(Collider other) {
+		if (active && other.gameObject.layer == LayerMask.NameToLayer("Swappable")) {
+			objectInRange = other.gameObject;
+		}
+	}
+	private void OnTriggerExit(Collider other) {
+		if (active && objectInRange == other.gameObject) {
+			objectInRange = null;
+		}
+	}
+	private void Swap() {
+		Player playerInRange = objectInRange.GetComponent<Player>();
+		playerInRange.active = true;
+		this.active = false;
+		objectInRange = null;
 	}
 
 	void LateUpdate() {
