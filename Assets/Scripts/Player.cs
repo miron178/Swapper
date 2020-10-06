@@ -18,12 +18,15 @@ public class Player : MonoBehaviour
 	private bool canJump = false;
 	[SerializeField]
 	private float rotationSpeed = 5f;
+	
+	//privates for active
 	[SerializeField]
 	private bool active = false;
 	private bool lastActive = false;
 	private Component[] meshRenderer;
 
 	//layers
+	//private layers
 	private int groundLayer;
 	private int SwapLayer;
 	private int wallLayer;
@@ -32,6 +35,7 @@ public class Player : MonoBehaviour
 	//privates for swaps
 	private GameObject objectInRange = null;
 	private GameObject swapped = null;
+	//privates for slime spawn
 
 	//materials
 	[SerializeField]
