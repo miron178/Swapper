@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
 	private bool lastActive = false;
 	private Component[] meshRenderer;
 
-	//layers
 	//private layers
 	private int groundLayer;
 	private int SwapLayer;
@@ -35,7 +34,6 @@ public class Player : MonoBehaviour
 
 	//privates for swaps
 	private GameObject objectInRange = null;
-	private GameObject swapped = null;
 	private bool interactRelease = false;
 
 	//privates for slime spawn
