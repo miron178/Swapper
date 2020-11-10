@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// pull request test
+// pull request test - more specific
 
 public class Finish : MonoBehaviour
 {
