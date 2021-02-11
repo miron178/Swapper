@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 494308221}
   - component: {fileID: 494308220}
   - component: {fileID: 494308219}
+  - component: {fileID: 494308223}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1485,6 +1486,19 @@ Transform:
   m_Father: {fileID: 1199956413}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
+--- !u!114 &494308223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494308218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc6369d8a3a4e34899a42f51c842eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorObject: {fileID: 1155298510612177829}
 --- !u!1 &504246854
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,7 +3713,7 @@ PrefabInstance:
     - target: {fileID: 3872799566877551135, guid: d05f13b14b8e008449de1a2f6f8bd122,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1
+      value: 0.769
       objectReference: {fileID: 0}
     - target: {fileID: 3872799566877551135, guid: d05f13b14b8e008449de1a2f6f8bd122,
         type: 3}
@@ -7110,6 +7124,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911773419}
   m_Mesh: {fileID: 4325872778671894940, guid: 7c62d286638f3f94c859092651323c89, type: 3}
+--- !u!1 &1959723755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084338843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1963753123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,6 +7450,7 @@ GameObject:
   - component: {fileID: 2143426097}
   - component: {fileID: 2143426096}
   - component: {fileID: 2143426095}
+  - component: {fileID: 2143426098}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7496,12 +7517,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143426094}
   m_LocalRotation: {x: 0.2588186, y: 0.0000005960464, z: -0.000000045887283, w: 0.96592593}
-  m_LocalPosition: {x: 24.188, y: 10.347288, z: 12.993679}
+  m_LocalPosition: {x: 36.23, y: 5.34, z: 19.3}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30.000002, y: 0, z: 0}
+--- !u!114 &2143426098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143426094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127a934af57b9ba4c80064688b9d7431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1959723755}
 --- !u!23 &109567740344098273
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9226,6 +9260,7 @@ GameObject:
   - component: {fileID: 8837339232296544315}
   - component: {fileID: 1195054703633020749}
   - component: {fileID: 1565383029608146685}
+  - component: {fileID: 7195747824236769204}
   m_Layer: 0
   m_Name: Door_Right
   m_TagString: Untagged
@@ -9233,6 +9268,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7195747824236769204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195747824236769203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4837501, y: 0.20986372, z: 1.7000003}
+  m_Center: {x: -0.20812528, y: -0.0000009536747, z: 0.85000026}
 --- !u!23 &7268712309036692411
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9460,6 +9508,7 @@ GameObject:
   - component: {fileID: 4246243920400317209}
   - component: {fileID: 6597398786888405106}
   - component: {fileID: 7158592948471722569}
+  - component: {fileID: 7954609291418268441}
   m_Layer: 0
   m_Name: Door_Left
   m_TagString: Untagged
@@ -9467,6 +9516,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &7954609291418268441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7954609291418268440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4837501, y: 0.20986378, z: 1.7000003}
+  m_Center: {x: 0.2081248, y: -0.0000009536744, z: 0.85000026}
 --- !u!23 &8196647344466183639
 MeshRenderer:
   m_ObjectHideFlags: 0
