@@ -9,22 +9,20 @@ public class TPCRotate : MonoBehaviour
 
 	[SerializeField]
 	private Vector3 distanceFromTarget = new Vector3(0f, 0f, -5f);
-	float horizontalAngleDistance = 0;
+	float horizontalAngleTarget = 0;
 	float horizontalAngleCurrent = 0;
 
 	[SerializeField]
 	float verticalAngle = 40;
 	float zoomValue = 1;
 
-	float horizontalAngleSmooth = 0;
 	float zoomValueSmooth = 1;
-
 
 	[SerializeField]
 	float zoomValueSmoothSpeed = 0.1f;
 
 	[SerializeField]
-	float horizontalSpeed = 0.02f;
+	float horizontalSpeed = 2.5f;
 	[SerializeField]
 	float zoomSpeed = 0.2f;
 
@@ -65,30 +63,28 @@ public class TPCRotate : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			horizontalAngleDistance -= 90.0f;
+			horizontalAngleTarget -= 90.0f;
 		}
 		else if (Input.GetKeyDown(KeyCode.RightArrow))
 		{
-			horizontalAngleDistance += 90.0f;
+			horizontalAngleTarget += 90.0f;
 		}
-		//if !true overflow
-#if true
-		//if true rounding error
-		float fraction = horizontalAngleDistance * horizontalSpeed;
-		horizontalAngleCurrent += fraction;
-		horizontalAngleDistance -= fraction;
 
-		if (horizontalAngleCurrent < 0.0f)
+		//wrap around avoid overflow
+		if (horizontalAngleTarget < 0.0f)
 		{
+			horizontalAngleTarget += 360.0f;
 			horizontalAngleCurrent += 360.0f;
 		}
-		else if (horizontalAngleCurrent > 360.0f)
+		else if (horizontalAngleTarget >= 360.0f)
 		{
+			horizontalAngleTarget -= 360.0f;
 			horizontalAngleCurrent -= 360.0f;
 		}
-		Debug.Log(horizontalAngleCurrent);
 
-#endif
+		// smoothly approach target angle
+		horizontalAngleCurrent += (horizontalAngleTarget - horizontalAngleCurrent) * horizontalSpeed * Time.deltaTime;
+
 		Quaternion rotation = Quaternion.Euler(verticalAngle, horizontalAngleCurrent, 0);
 		Vector3 pos = rotation * distanceFromTarget * zoomValueSmooth;
 

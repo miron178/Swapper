@@ -254,7 +254,7 @@ MonoBehaviour:
   distanceFromTarget: {x: 0, y: 0, z: -5}
   verticalAngle: 40
   zoomValueSmoothSpeed: 0.1
-  horizontalSpeed: 0.2
+  horizontalSpeed: 2.5
   zoomSpeed: 0.02
   zoomMin: 0.5
   zoomMax: 2
