@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public GameObject doorObject;
+    public GameObject doorObjectL;
+    public GameObject doorObjectR;
 
     private bool DoorOpen;
     private bool buttonPressed;
@@ -25,7 +26,8 @@ public class DoorScript : MonoBehaviour
         if (other.gameObject.tag != "Player")
         {
             DoorOpen = !DoorOpen;
-            doorObject.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+            doorObjectL.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+            doorObjectR.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
         }
     }
 }
