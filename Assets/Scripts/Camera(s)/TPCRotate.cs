@@ -45,8 +45,7 @@ public class TPCRotate : MonoBehaviour
 		}
 
 		Vector3 pos = ControllerInput();
-
-		gameObject.transform.localPosition = pos;
+		gameObject.transform.position = pos + m_currentTarget.position;
 
 		Camera camera = GetComponent<Camera>();
 		camera.transform.LookAt(m_currentTarget);
@@ -91,15 +90,13 @@ public class TPCRotate : MonoBehaviour
 		return pos;
 	}
 
-	/* work in progress
 	public void SetCurrentTarget(Transform target)
 	{
 		m_currentTarget = target;
-		gameObject.transform.parent = m_currentTarget;
-		gameObject.transform.localPosition = distanceFromTarget;
+		//gameObject.transform.parent = m_currentTarget;
+		//gameObject.transform.localPosition = distanceFromTarget;
 
-		horizontalAngle = horizontalAngleSmooth = 0;
-		zoomValue = zoomValueSmooth = 1;
+		//horizontalAngle = horizontalAngleSmooth = 0;
+		//zoomValue = zoomValueSmooth = 1;
 	}
-	*/
 }
