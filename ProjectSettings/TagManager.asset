@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Strong
+  - Small
+  - Armoured
   layers:
   - Default
   - TransparentFX
