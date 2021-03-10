@@ -10,20 +10,27 @@ public class DoorScript : MonoBehaviour
     private bool DoorOpen;
     private bool buttonPressed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag == "Player")
+        {
+            DoorOpen = !DoorOpen;
+            doorObjectL.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+            doorObjectR.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+        }
+        else if (other.gameObject.tag == "Strong")
+        {
+            DoorOpen = !DoorOpen;
+            doorObjectL.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+            doorObjectR.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+        }
+        else if (other.gameObject.tag == "Small")
+        {
+            DoorOpen = !DoorOpen;
+            doorObjectL.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+            doorObjectR.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
+        }
+        else if (other.gameObject.tag == "Armoured")
         {
             DoorOpen = !DoorOpen;
             doorObjectL.GetComponent<Animator>().SetBool("DoorOpen", DoorOpen);
