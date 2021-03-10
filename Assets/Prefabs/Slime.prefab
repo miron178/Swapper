@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54641e38c6ea7224fbf0837e7d1adc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpCheck: {fileID: 3872799565404164911}
 --- !u!114 &293111243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6e6a9068683694c854d5122235759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScript: {fileID: 0}
+  movementScript: {fileID: 5566298700318322399}
   active: 1
   spawnPoint: {fileID: 0}
   slimePrefab: {fileID: 0}
