@@ -11100,7 +11100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceFromTarget: {x: 0, y: 0, z: -5}
-  verticalAngle: 40
+  verticalAngle: 30
   zoomValueSmoothSpeed: 0.1
   horizontalSpeed: 2.5
   zoomSpeed: 0.2

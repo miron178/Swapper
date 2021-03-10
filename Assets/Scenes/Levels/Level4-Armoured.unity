@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7790,14 +7790,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a2642af40beb740a29e00467454dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_currentTarget: {fileID: 1208260919}
   distanceFromTarget: {x: 0, y: 0, z: -5}
-  verticalAngle: 40
+  verticalAngle: 30
   zoomValueSmoothSpeed: 0.1
   horizontalSpeed: 2.5
   zoomSpeed: 0.2
   zoomMin: 0.5
   zoomMax: 2
+  m_currentTarget: {fileID: 1208260919}
 --- !u!114 &2143426099
 MonoBehaviour:
   m_ObjectHideFlags: 0
