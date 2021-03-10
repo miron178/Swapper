@@ -5,40 +5,225 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
-    private float playerSpeed = 5.0f;
-    private float jumpHeight = 1.0f;
+    private Vector3 playerVelocity = Vector3.zero;
+    private float moveSpeed = 5.0f;
+    private float jumpHeight = 5.0f;
     private float gravityValue = -9.81f;
+
+    private float climbSpeed = 3.0f;
+    private float limitClimbingRaycastDistance = 1f;
+
+    [SerializeField]
+    private GameObject jumpCheck;
+    private int groundLayerMask = 0;
+    private bool groundedPlayer = false;
+
+    private float jumpHoldOffTime = 0.5f; //in seconds
+    private float jumpLastTime = 0;
+
+    private float climbHoldOffTime = 2f; //in seconds
+    private float climbLastTime = 0;
+
+    private int slimeLayer = 0;
+
+    //Camera angle
+    private TPCRotate cameraRotation;
 
     private void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
+        slimeLayer = LayerMask.NameToLayer("Slime");
+        groundLayerMask = LayerMask.GetMask("Ground", "Climbable");
+        cameraRotation = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<TPCRotate>();
     }
+
+    private enum State
+    {
+        WALKING,
+        CLIMBING,
+        FALLING
+    }
+    private State state = State.FALLING;
 
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+
+        switch (state)
         {
-            playerVelocity.y = 0f;
+            case State.WALKING:
+                Walk();
+                break;
+            case State.CLIMBING:
+                Climb();
+                break;
+            case State.FALLING:
+                Fall();
+                break;
+            default:
+                Debug.LogError("The state is unknown.");
+                break;
         }
 
+        if (this.gameObject.layer == slimeLayer)
+        {
+            Debug.DrawRay(transform.position, transform.forward * limitClimbingRaycastDistance, Color.red);
+            RaycastHit hit;
+            if (CanClimb() && IsTouchingClimbable(out hit))
+            {
+                StartClimb(hit.normal);
+			}
+        }
+    }
+
+    private bool IsTouchingClimbable(out RaycastHit hit)
+    {
+        Debug.DrawRay(transform.position, transform.forward * limitClimbingRaycastDistance, Color.red);
+        int layerMask = LayerMask.GetMask("Climbable");
+        return Physics.Raycast(transform.position, transform.forward, out hit, limitClimbingRaycastDistance, layerMask);
+    }
+    private bool IsTouchingClimbable()
+    {
+		return IsTouchingClimbable(out _);
+    }
+
+    private void UpdateGrounded()
+    {
+        groundedPlayer = Physics.Linecast(transform.position, jumpCheck.transform.position, groundLayerMask);
+    }
+
+    private void StartWalk()
+	{
+        state = State.WALKING;
+        playerVelocity.y = 0;
+    }
+
+    // set horizontal movement velocity
+    private void UpdatePlayerVelocityXZ()
+	{
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
-
-        if (move != Vector3.zero)
+        if (move == Vector3.zero)
         {
-            gameObject.transform.forward = move;
+            return;
         }
 
-        // Changes the height position of the player..
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        // Adjust move direction to camera angle
+        move = Quaternion.Euler(0, cameraRotation.angle, 0) * move;
+
+        //gameObject.transform.forward = move;
+        gameObject.transform.rotation = Quaternion.LookRotation(move);
+
+        Vector3 motion = move * moveSpeed;
+        playerVelocity.x = motion.x;
+        playerVelocity.z = motion.z;
+    }
+
+    private bool CanJump()
+    {
+        float now = Time.time;
+        return now - jumpLastTime > jumpHoldOffTime;
+    }
+
+    private bool CanClimb()
+    {
+        float now = Time.time;
+        Debug.Log(now - climbLastTime);
+        return now - climbLastTime > climbHoldOffTime;
+    }
+
+    private void Walk()
+    {
+        UpdatePlayerVelocityXZ();
+
+        if (Input.GetButtonDown("Jump") && CanJump())
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            playerVelocity.y += jumpHeight; //initial jump speed really
+            StartFall();
         }
+
+        Vector3 movement = playerVelocity * Time.deltaTime;
+        if (movement.magnitude >= controller.minMoveDistance)
+        {
+            controller.Move(movement);
+            UpdateGrounded();
+            if (!groundedPlayer)
+            {
+                StartFall();
+            }
+        }
+    }
+
+    private void StartClimb(Vector3 normal)
+	{
+        gameObject.transform.rotation = Quaternion.LookRotation(normal * -1f);
+        state = State.CLIMBING;
+
+        playerVelocity.y = 0;
+
+        float now = Time.time;
+        climbLastTime = now;
+    }
+
+    private void Climb()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            StartFall();
+            return;
+        }
+
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0); //switch 0 pos stops movment on single axis?
+        if (move == Vector3.zero)
+        {
+            return;
+        }
+
+        playerVelocity = move * climbSpeed;
+        Vector3 movement = playerVelocity * Time.deltaTime;
+        if (movement.magnitude >= controller.minMoveDistance)
+        {
+            controller.Move(gameObject.transform.rotation * movement);
+            if (!IsTouchingClimbable())
+			{
+                if (move.y > 0 && CanJump())
+                {
+                    playerVelocity.y += jumpHeight; //initial jump speed really
+                    Debug.Log("climb end");
+                }
+                else
+                {
+                    playerVelocity = Vector3.zero;
+                }
+                StartFall();
+			}
+        }
+    }
+
+    private void StartFall()
+	{
+        state = State.FALLING;
+
+        float now = Time.time;
+        jumpLastTime = now;
+    }
+
+    private void Fall()
+    {
+        UpdatePlayerVelocityXZ();
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+        
+        UpdateGrounded();
+        if (groundedPlayer)
+        {
+            StartWalk();
+        }
+    }
+
+    private void OnGUI()
+	{
+        GUI.Label(new Rect(0, 0,  200, 20), playerVelocity.x.ToString());
+        GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
+        GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
     }
 }
