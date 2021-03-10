@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 156065022}
   - component: {fileID: 156065021}
   - component: {fileID: 156065020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor100x200_005 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 209671472}
   - component: {fileID: 209671471}
   - component: {fileID: 209671470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor100x200_005 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1703,6 +1703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CurvedFloor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: aa3a3e7fef021cd429f6c1505d2b5ed3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3a3e7fef021cd429f6c1505d2b5ed3, type: 3}
 --- !u!1 &306891919 stripped
@@ -2106,7 +2111,7 @@ GameObject:
   - component: {fileID: 422137237}
   - component: {fileID: 422137236}
   - component: {fileID: 422137238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2199,7 +2204,7 @@ GameObject:
   - component: {fileID: 426098104}
   - component: {fileID: 426098103}
   - component: {fileID: 426098102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3088,7 +3093,7 @@ GameObject:
   - component: {fileID: 580590538}
   - component: {fileID: 580590537}
   - component: {fileID: 580590539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3617,7 +3622,7 @@ GameObject:
   - component: {fileID: 665332145}
   - component: {fileID: 665332144}
   - component: {fileID: 665332146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4813,7 +4818,7 @@ GameObject:
   - component: {fileID: 895382347}
   - component: {fileID: 895382346}
   - component: {fileID: 895382345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5266,7 +5271,7 @@ GameObject:
   - component: {fileID: 995643278}
   - component: {fileID: 995643277}
   - component: {fileID: 995643279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6249,7 +6254,7 @@ GameObject:
   - component: {fileID: 1272495861}
   - component: {fileID: 1272495860}
   - component: {fileID: 1272495859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6437,7 +6442,7 @@ GameObject:
   - component: {fileID: 1283958032}
   - component: {fileID: 1283958031}
   - component: {fileID: 1283958033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6831,7 +6836,7 @@ GameObject:
   - component: {fileID: 1402054789}
   - component: {fileID: 1402054788}
   - component: {fileID: 1402054787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7016,7 +7021,7 @@ GameObject:
   - component: {fileID: 1404398852}
   - component: {fileID: 1404398851}
   - component: {fileID: 1404398853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7281,7 +7286,7 @@ GameObject:
   - component: {fileID: 1466038583}
   - component: {fileID: 1466038582}
   - component: {fileID: 1466038584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7827,7 +7832,7 @@ GameObject:
   - component: {fileID: 1552472415}
   - component: {fileID: 1552472414}
   - component: {fileID: 1552472416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8978,7 +8983,7 @@ GameObject:
   - component: {fileID: 1799091844}
   - component: {fileID: 1799091843}
   - component: {fileID: 1799091842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Diagonal_Floor_003 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9334,7 +9339,7 @@ GameObject:
   - component: {fileID: 1861851590}
   - component: {fileID: 1861851589}
   - component: {fileID: 1861851591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9735,7 +9740,7 @@ GameObject:
   - component: {fileID: 1911773423}
   - component: {fileID: 1911773422}
   - component: {fileID: 1911773421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10034,7 +10039,7 @@ GameObject:
   - component: {fileID: 1975490541}
   - component: {fileID: 1975490540}
   - component: {fileID: 1975490539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10823,7 +10828,7 @@ GameObject:
   - component: {fileID: 2100005381}
   - component: {fileID: 2100005380}
   - component: {fileID: 2100005382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor200_002 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11094,7 +11099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a2642af40beb740a29e00467454dd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_currentTarget: {fileID: 1959723763}
   distanceFromTarget: {x: 0, y: 0, z: -5}
   verticalAngle: 40
   zoomValueSmoothSpeed: 0.1
@@ -11102,6 +11106,7 @@ MonoBehaviour:
   zoomSpeed: 0.2
   zoomMin: 0.5
   zoomMax: 2
+  m_currentTarget: {fileID: 1959723763}
 --- !u!114 &2143426100
 MonoBehaviour:
   m_ObjectHideFlags: 0
