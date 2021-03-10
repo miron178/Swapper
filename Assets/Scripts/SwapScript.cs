@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class SwapScript : MonoBehaviour
 {
-	private Rigidbody rb;
-
 	public Movement movementScript;
 
 	//privates for active
@@ -38,7 +36,6 @@ public class SwapScript : MonoBehaviour
 	private Material yellow;
 
 	void Start() {
-		rb = GetComponent<Rigidbody>(); //used later to make code more readable
 		//layer dependancies
 		groundLayer = LayerMask.NameToLayer("Ground");
 		testLayer = LayerMask.NameToLayer("Test");
