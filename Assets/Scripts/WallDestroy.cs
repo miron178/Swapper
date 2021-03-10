@@ -7,8 +7,7 @@ public class WallDestroy : MonoBehaviour
     //public GameObject destroyedVersion;
 
 #if true
-    void OnCollisionEnter(Collision other)
-	{
+	private void OnTriggerEnter(Collider other)	{
         if (other.gameObject.tag == "Strong")
         {
             Destroy(this.gameObject);
