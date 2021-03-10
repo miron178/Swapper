@@ -10,7 +10,7 @@ public class TPCRotate : MonoBehaviour
 	float horizontalAngleCurrent = 0;
 
 	[SerializeField]
-	float verticalAngle = 40;
+	float verticalAngle = 20;
 	float zoomValue = 1;
 
 	float zoomValueSmooth = 1;
