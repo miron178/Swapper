@@ -5,9 +5,6 @@ using UnityEngine;
 public class TPCRotate : MonoBehaviour
 {
 	[SerializeField]
-	private Transform m_currentTarget;
-
-	[SerializeField]
 	private Vector3 distanceFromTarget = new Vector3(0f, 0f, -5f);
 	float horizontalAngleTarget = 0;
 	float horizontalAngleCurrent = 0;
@@ -33,11 +30,8 @@ public class TPCRotate : MonoBehaviour
 
 	public float angle { get { return horizontalAngleCurrent; } }
 
-	private void Start()
-	{
-		//Needs testing
-		//SetCurrentTarget(m_currentTarget);
-	}
+	[SerializeField]
+	private Transform m_currentTarget;
 
 	private void LateUpdate()
 	{
@@ -95,10 +89,7 @@ public class TPCRotate : MonoBehaviour
 	public void SetCurrentTarget(Transform target)
 	{
 		m_currentTarget = target;
-		//gameObject.transform.parent = m_currentTarget;
-		//gameObject.transform.localPosition = distanceFromTarget;
-
-		//horizontalAngle = horizontalAngleSmooth = 0;
-		//zoomValue = zoomValueSmooth = 1;
 	}
 }
+
+

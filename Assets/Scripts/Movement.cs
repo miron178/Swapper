@@ -35,6 +35,7 @@ public class Movement : MonoBehaviour
         slimeLayer = LayerMask.NameToLayer("Slime");
         groundLayerMask = LayerMask.GetMask("Ground", "Climbable");
         cameraRotation = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<TPCRotate>();
+        cameraRotation.SetCurrentTarget(transform); //look at me
     }
 
     private enum State
@@ -88,6 +89,7 @@ public class Movement : MonoBehaviour
 
     private void UpdateGrounded()
     {
+        //on collision with colider not empty
         groundedPlayer = Physics.Linecast(transform.position, jumpCheck.transform.position, groundLayerMask);
     }
 

@@ -56,12 +56,13 @@ public class SwapScript : MonoBehaviour
 			}
 		}
 
+		movementScript.enabled = active;
+
 		if (active) {
 			float interact = Input.GetAxis("Interact"); //swap
 
 			float spawn = Input.GetAxis("Spawn"); //spawn
 
-			movementScript.enabled = true;
 			if (interact > 0 && objectInRange && !interactRelease) {
 				Swap();
 				interactRelease = true;
