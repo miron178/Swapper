@@ -54,9 +54,8 @@ public class SwapScript : MonoBehaviour
 			foreach (MeshRenderer renderer in meshRenderer) {
 				renderer.material = active?green:yellow;
 			}
+			movementScript.enabled = active;
 		}
-
-		movementScript.enabled = active;
 
 		if (active) {
 			float interact = Input.GetAxis("Interact"); //swap

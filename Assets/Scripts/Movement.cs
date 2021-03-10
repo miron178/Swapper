@@ -29,13 +29,17 @@ public class Movement : MonoBehaviour
     //Camera angle
     private TPCRotate cameraRotation;
 
+    private void OnEnable() //runs before Start()
+    {
+        cameraRotation = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<TPCRotate>();
+        cameraRotation.SetCurrentTarget(transform); //look at me
+    }
+
     private void Start()
     {
         controller = gameObject.AddComponent<CharacterController>();
         slimeLayer = LayerMask.NameToLayer("Slime");
         groundLayerMask = LayerMask.GetMask("Ground", "Climbable");
-        cameraRotation = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<TPCRotate>();
-        cameraRotation.SetCurrentTarget(transform); //look at me
     }
 
     private enum State
