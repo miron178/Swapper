@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level2-Big.unity
     guid: 2f549b4aafab6fe4d8b3f796de82750b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Level3-Small.unity
     guid: 1f4a8dc2b3f0bc74f8dcb57bf799f387
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/Level4-Armoured.unity
     guid: ad9eb7171d6721845806d4a9abceb6ca
   m_configObjects: {}

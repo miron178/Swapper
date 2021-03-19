@@ -4461,7 +4461,8 @@ MonoBehaviour:
   movementScript: {fileID: 1201949840}
   active: 0
   spawnPoint: {fileID: 1201800155}
-  slimePrefab: {fileID: 1610602629}
+  slimePrefab: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
+    type: 3}
   green: {fileID: 2100000, guid: 61e72ffac27f06f449ea5ab35407c58e, type: 2}
   yellow: {fileID: 2100000, guid: f328dd9c24472a4489109ead2962f5fd, type: 2}
 --- !u!114 &1201949840
@@ -5614,12 +5615,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594578472}
   m_Mesh: {fileID: 4325872778671894940, guid: 7c62d286638f3f94c859092651323c89, type: 3}
---- !u!1 &1610602629 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3872799566877551128, guid: d05f13b14b8e008449de1a2f6f8bd122,
-    type: 3}
-  m_PrefabInstance: {fileID: 1084338843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630701336
 GameObject:
   m_ObjectHideFlags: 0

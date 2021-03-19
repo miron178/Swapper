@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1300565936527959805}
   - component: {fileID: 2127938701324288636}
   - component: {fileID: 5356662027637130756}
+  - component: {fileID: 4741459231052109020}
   m_Layer: 0
   m_Name: Cabinet_Drawer_Cupboard
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5356662027637130763}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.656, y: 0.00049985, z: 0.30786}
   m_LocalScale: {x: 12.5719, y: 12.5719, z: 12.5719}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!33 &1300565936527959805
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94,3 +95,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1020162950553618144, guid: 7306fa3ac9d70b94db61600d75191378, type: 3}
+--- !u!65 &4741459231052109020
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356662027637130763}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18479548, y: 0.1574803, z: 0.17716533}
+  m_Center: {x: 0.013657836, y: 0.00000013451746, z: 0.088582665}
