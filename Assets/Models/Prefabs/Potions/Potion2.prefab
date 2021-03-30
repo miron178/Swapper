@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1906232295602471954
+--- !u!1 &2635953250011084882
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4696821894589061200}
-  - component: {fileID: 35932353734182784}
-  - component: {fileID: 4603548243723498738}
+  - component: {fileID: 3764063435146788858}
+  m_Layer: 0
+  m_Name: Potion2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3764063435146788858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635953250011084882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.81, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5487685148186382529}
+  - {fileID: 5755692393379013171}
+  - {fileID: 2227690029156322283}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5565479227723181647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5755692393379013171}
+  - component: {fileID: 3944342282421939686}
+  - component: {fileID: 2693415238226249670}
   m_Layer: 0
   m_Name: Potion02Cap
   m_TagString: Untagged
@@ -18,35 +51,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4696821894589061200
+--- !u!4 &5755692393379013171
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906232295602471954}
+  m_GameObject: {fileID: 5565479227723181647}
   m_LocalRotation: {x: -0.5000003, y: 0.49999985, z: 0.49999973, w: 0.50000024}
-  m_LocalPosition: {x: 40.8956, y: 19.41918, z: -2.7360687}
+  m_LocalPosition: {x: 0, y: 0.017, z: -0}
   m_LocalScale: {x: 0.9232417, y: 0.9232417, z: 0.9232417}
   m_Children: []
-  m_Father: {fileID: 3972748577420223825}
+  m_Father: {fileID: 3764063435146788858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &35932353734182784
+--- !u!33 &3944342282421939686
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906232295602471954}
+  m_GameObject: {fileID: 5565479227723181647}
   m_Mesh: {fileID: -3315169968529762691, guid: c70df77f9bd52dc4d93037a50e1a643c, type: 3}
---- !u!23 &4603548243723498738
+--- !u!23 &2693415238226249670
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906232295602471954}
+  m_GameObject: {fileID: 5565479227723181647}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,7 +112,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &6956293040191039064
+--- !u!1 &6127576734953881289
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +120,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4468529754614387063}
-  - component: {fileID: 7479985144454742856}
-  - component: {fileID: 8019865551716439025}
+  - component: {fileID: 2227690029156322283}
+  - component: {fileID: 4624883830187500653}
+  - component: {fileID: 5594152925144818622}
   m_Layer: 0
   m_Name: Potion002Inside
   m_TagString: Untagged
@@ -97,35 +130,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4468529754614387063
+--- !u!4 &2227690029156322283
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6956293040191039064}
+  m_GameObject: {fileID: 6127576734953881289}
   m_LocalRotation: {x: -0.5000003, y: 0.49999985, z: 0.49999973, w: 0.50000024}
-  m_LocalPosition: {x: 40.8956, y: 19.439503, z: -2.7360687}
+  m_LocalPosition: {x: 0, y: 0.017, z: 0}
   m_LocalScale: {x: 0.8200949, y: 0.82009494, z: 0.82009494}
   m_Children: []
-  m_Father: {fileID: 3972748577420223825}
+  m_Father: {fileID: 3764063435146788858}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7479985144454742856
+--- !u!33 &4624883830187500653
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6956293040191039064}
+  m_GameObject: {fileID: 6127576734953881289}
   m_Mesh: {fileID: -5765954833192881478, guid: c70df77f9bd52dc4d93037a50e1a643c, type: 3}
---- !u!23 &8019865551716439025
+--- !u!23 &5594152925144818622
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6956293040191039064}
+  m_GameObject: {fileID: 6127576734953881289}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -158,7 +191,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7127807441956965578
+--- !u!1 &6462663088504815193
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,42 +199,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3972748577420223825}
-  m_Layer: 0
-  m_Name: Potion2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3972748577420223825
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7127807441956965578}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4845701451007245908}
-  - {fileID: 4696821894589061200}
-  - {fileID: 4468529754614387063}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9098870840044939721
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4845701451007245908}
-  - component: {fileID: 1273522217637161395}
-  - component: {fileID: 4442546891768622962}
+  - component: {fileID: 5487685148186382529}
+  - component: {fileID: 2175550060427270057}
+  - component: {fileID: 5987857070613948157}
   m_Layer: 0
   m_Name: Potion002
   m_TagString: Untagged
@@ -209,35 +209,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4845701451007245908
+--- !u!4 &5487685148186382529
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9098870840044939721}
+  m_GameObject: {fileID: 6462663088504815193}
   m_LocalRotation: {x: -0.5000003, y: 0.49999985, z: 0.49999973, w: 0.50000024}
-  m_LocalPosition: {x: 40.8956, y: 19.41918, z: -2.7360687}
+  m_LocalPosition: {x: 0, y: 0.017, z: 0}
   m_LocalScale: {x: 0.9232417, y: 0.9232417, z: 0.9232417}
   m_Children: []
-  m_Father: {fileID: 3972748577420223825}
+  m_Father: {fileID: 3764063435146788858}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1273522217637161395
+--- !u!33 &2175550060427270057
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9098870840044939721}
+  m_GameObject: {fileID: 6462663088504815193}
   m_Mesh: {fileID: -429497153323838760, guid: c70df77f9bd52dc4d93037a50e1a643c, type: 3}
---- !u!23 &4442546891768622962
+--- !u!23 &5987857070613948157
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9098870840044939721}
+  m_GameObject: {fileID: 6462663088504815193}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
