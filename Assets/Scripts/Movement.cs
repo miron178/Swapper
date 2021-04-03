@@ -37,7 +37,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();
         slimeLayer = LayerMask.NameToLayer("Slime");
         groundLayerMask = LayerMask.GetMask("Ground", "Climbable");
     }
