@@ -14,9 +14,7 @@ public class Movement : MonoBehaviour
     private float limitClimbingRaycastDistance = 1f;
 
     [SerializeField]
-    private GameObject jumpCheck;
     private int groundLayerMask = 0;
-    private bool groundedPlayer = false;
 
     private float jumpHoldOffTime = 0.5f; //in seconds
     private float jumpLastTime = 0;
@@ -91,12 +89,6 @@ public class Movement : MonoBehaviour
 		return IsTouchingClimbable(out _);
     }
 
-    private void UpdateGrounded()
-    {
-        //on collision with colider not empty
-        groundedPlayer = Physics.Linecast(transform.position, jumpCheck.transform.position, groundLayerMask);
-    }
-
     private void StartWalk()
 	{
         state = State.WALKING;
@@ -145,13 +137,17 @@ public class Movement : MonoBehaviour
             playerVelocity.y += jumpHeight; //initial jump speed really
             StartFall();
         }
+        else
+        {
+            //keep controller grounded (playerVelocity.y = 0 doesn't work)
+            playerVelocity.y = gravityValue * Time.deltaTime;
+        }
 
         Vector3 movement = playerVelocity * Time.deltaTime;
         if (movement.magnitude >= controller.minMoveDistance)
         {
             controller.Move(movement);
-            UpdateGrounded();
-            if (!groundedPlayer)
+            if (!controller.isGrounded)
             {
                 StartFall();
             }
@@ -219,8 +215,7 @@ public class Movement : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
         
-        UpdateGrounded();
-        if (groundedPlayer)
+        if (controller.isGrounded)
         {
             StartWalk();
         }
