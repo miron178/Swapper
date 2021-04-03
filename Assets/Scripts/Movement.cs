@@ -124,7 +124,6 @@ public class Movement : MonoBehaviour
     private bool CanClimb()
     {
         float now = Time.time;
-        Debug.Log(now - climbLastTime);
         return now - climbLastTime > climbHoldOffTime;
     }
 
