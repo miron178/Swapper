@@ -74,7 +74,7 @@ public class Movement : MonoBehaviour
             if (CanClimb() && IsTouchingClimbable(out hit))
             {
                 StartClimb(hit.normal);
-			}
+            }
         }
     }
 
@@ -86,18 +86,18 @@ public class Movement : MonoBehaviour
     }
     private bool IsTouchingClimbable()
     {
-		return IsTouchingClimbable(out _);
+        return IsTouchingClimbable(out _);
     }
 
     private void StartWalk()
-	{
+    {
         state = State.WALKING;
         playerVelocity.y = 0;
     }
 
     // set horizontal movement velocity
     private void UpdatePlayerVelocityXZ()
-	{
+    {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (move == Vector3.zero)
         {
@@ -154,7 +154,7 @@ public class Movement : MonoBehaviour
     }
 
     private void StartClimb(Vector3 normal)
-	{
+    {
         gameObject.transform.rotation = Quaternion.LookRotation(normal * -1f);
         state = State.CLIMBING;
 
@@ -184,7 +184,7 @@ public class Movement : MonoBehaviour
         {
             controller.Move(gameObject.transform.rotation * movement);
             if (!IsTouchingClimbable())
-			{
+            {
                 if (move.y > 0 && CanJump())
                 {
                     playerVelocity.y += jumpHeight; //initial jump speed really
@@ -195,12 +195,12 @@ public class Movement : MonoBehaviour
                     playerVelocity = Vector3.zero;
                 }
                 StartFall();
-			}
+            }
         }
     }
 
     private void StartFall()
-	{
+    {
         state = State.FALLING;
 
         float now = Time.time;
@@ -213,7 +213,7 @@ public class Movement : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        
+
         if (controller.isGrounded)
         {
             StartWalk();
@@ -221,8 +221,8 @@ public class Movement : MonoBehaviour
     }
 
     private void OnGUI()
-	{
-        GUI.Label(new Rect(0, 0,  200, 20), playerVelocity.x.ToString());
+    {
+        GUI.Label(new Rect(0, 0, 200, 20), playerVelocity.x.ToString());
         GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
         GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
     }

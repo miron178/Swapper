@@ -8,17 +8,21 @@ public class Movable : MonoBehaviour
 
     Rigidbody m_Rigidbody;
 
-    private void Start() {
+    private void Start()
+    {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-	private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Strong") {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Strong")
+        {
             m_Rigidbody.constraints = RigidbodyConstraints.None;
         }
     }
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerExit(Collider other)
+    {
         m_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 }
