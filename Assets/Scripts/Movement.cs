@@ -13,9 +13,6 @@ public class Movement : MonoBehaviour
     private float climbSpeed = 3.0f;
     private float limitClimbingRaycastDistance = 1f;
 
-    [SerializeField]
-    private int groundLayerMask = 0;
-
     private float jumpHoldOffTime = 0.5f; //in seconds
     private float jumpLastTime = 0;
 
@@ -38,7 +35,6 @@ public class Movement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         slimeLayer = LayerMask.NameToLayer("Slime");
-        groundLayerMask = LayerMask.GetMask("Ground", "Climbable");
     }
 
     private enum State
