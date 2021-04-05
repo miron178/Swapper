@@ -15,6 +15,7 @@ public class SwapScript : MonoBehaviour
 
     //private layers
     private int swapLayer;
+    private int slimeLayer;
 
     //privates for swaps
     private GameObject objectInRange = null;
@@ -36,6 +37,7 @@ public class SwapScript : MonoBehaviour
     {
         //layer dependancies
         swapLayer = LayerMask.NameToLayer("Swappable");
+        slimeLayer = LayerMask.NameToLayer("Slime");
 
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
 
@@ -71,7 +73,7 @@ public class SwapScript : MonoBehaviour
                 interactRelease = false;
             }
 
-            if (spawn > 0)
+            if (spawn > 0 && this.gameObject.layer != slimeLayer)
             {
                 SpawnSlime();
             }
@@ -80,9 +82,11 @@ public class SwapScript : MonoBehaviour
 
     private bool Obstacle(GameObject other)
     {
+        SwapScript swap = other.GetComponent<SwapScript>();
+        Vector3 target = swap.spawnPoint.position;
         int ignoreSwapLayer = ~(1 << swapLayer);
-        Debug.DrawLine(this.gameObject.transform.position, other.gameObject.transform.position);
-        return Physics.Linecast(this.gameObject.transform.position, other.gameObject.transform.position, ignoreSwapLayer);
+        Debug.DrawLine(this.gameObject.transform.position, target);
+        return Physics.Linecast(this.gameObject.transform.position, target, ignoreSwapLayer);
     }
 
     private void MaybeInRange(GameObject other)
@@ -114,7 +118,7 @@ public class SwapScript : MonoBehaviour
         SwapScript playerInRange = objectInRange.GetComponent<SwapScript>();
         playerInRange.active = true;
 
-        if (this.gameObject.layer != LayerMask.NameToLayer("Slime"))
+        if (this.gameObject.layer != slimeLayer)
         {
             this.active = false;
             objectInRange = null;
