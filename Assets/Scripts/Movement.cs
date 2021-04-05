@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
 
     //Camera angle
     private TPCRotate cameraRotation;
+    int climbCameraAngle;
 
     private void OnEnable() //runs before Start()
     {
@@ -67,9 +68,8 @@ public class Movement : MonoBehaviour
                 break;
         }
 
-        if (this.gameObject.layer == slimeLayer)
+        if (this.gameObject.layer == slimeLayer && state != State.CLIMBING)
         {
-            Debug.DrawRay(transform.position, transform.forward * limitClimbingRaycastDistance, Color.red);
             RaycastHit hit;
             if (CanClimb() && IsTouchingClimbable(out hit))
             {
@@ -105,7 +105,7 @@ public class Movement : MonoBehaviour
         }
 
         // Adjust move direction to camera angle
-        move = Quaternion.Euler(0, cameraRotation.angle, 0) * move;
+        move = Quaternion.Euler(0, cameraRotation.angleCurrent, 0) * move;
 
         //gameObject.transform.forward = move;
         gameObject.transform.rotation = Quaternion.LookRotation(move);
@@ -155,6 +155,8 @@ public class Movement : MonoBehaviour
 
     private void StartClimb(Vector3 normal)
     {
+        climbCameraAngle = (int)cameraRotation.angleTarget;
+
         gameObject.transform.rotation = Quaternion.LookRotation(normal * -1f);
         state = State.CLIMBING;
 
@@ -172,10 +174,31 @@ public class Movement : MonoBehaviour
             return;
         }
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0); //switch 0 pos stops movment on single axis?
-        if (move == Vector3.zero)
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        if (h == 0.0f && v == 0.0f)
         {
+            climbCameraAngle = (int)cameraRotation.angleTarget;
             return;
+        }
+        // else keep climbCameraAngle unchanged while moving
+
+        Vector3 move;
+        switch (climbCameraAngle)
+        {
+            case 0:
+            default:
+                move = new Vector3(h, v, 0);
+                break;
+            case 90:
+                move = new Vector3(v, -h, 0);
+                break;
+            case 180:
+                move = new Vector3(-h, -v, 0);
+                break;
+            case 270:
+                move = new Vector3(-v, h, 0);
+                break;
         }
 
         playerVelocity = move * climbSpeed;
@@ -188,7 +211,6 @@ public class Movement : MonoBehaviour
                 if (move.y > 0 && CanJump())
                 {
                     playerVelocity.y += jumpHeight; //initial jump speed really
-                    Debug.Log("climb end");
                 }
                 else
                 {
@@ -222,7 +244,7 @@ public class Movement : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(0, 0, 200, 20), playerVelocity.x.ToString());
+        GUI.Label(new Rect(0,  0, 200, 20), playerVelocity.x.ToString());
         GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
         GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
     }

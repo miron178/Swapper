@@ -28,7 +28,8 @@ public class TPCRotate : MonoBehaviour
 	[SerializeField]
 	float zoomMax = 2.0f;
 
-	public float angle { get { return horizontalAngleCurrent; } }
+	public float angleCurrent { get { return horizontalAngleCurrent; } }
+	public float angleTarget  { get { return horizontalAngleTarget;  } }
 
 	[SerializeField]
 	private Transform m_currentTarget;
