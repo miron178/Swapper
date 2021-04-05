@@ -205,7 +205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54641e38c6ea7224fbf0837e7d1adc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayerMask: 0
+  canJump: 0
+  canClimb: 1
+  moveSpeed: 5
+  jumpHeight: 5
+  climbSpeed: 3
 --- !u!114 &531905551
 MonoBehaviour:
   m_ObjectHideFlags: 0

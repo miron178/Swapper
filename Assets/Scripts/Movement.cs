@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField]
+    private bool  canJump    = false;
+    [SerializeField]
+    private bool  canClimb   = false;
+    [SerializeField]
+    private float moveSpeed  = 5.0f;
+    [SerializeField]
+    private float jumpHeight = 5.0f;
+    [SerializeField]
+    private float climbSpeed = 3.0f;
+
     private CharacterController controller;
     private Vector3 playerVelocity = Vector3.zero;
-    private float moveSpeed = 5.0f;
-    private float jumpHeight = 5.0f;
     private float gravityValue = -9.81f;
 
-    private float climbSpeed = 3.0f;
     private float limitClimbingRaycastDistance = 1f;
 
     private float jumpHoldOffTime = 0.5f; //in seconds
@@ -114,13 +122,13 @@ public class Movement : MonoBehaviour
     private bool CanJump()
     {
         float now = Time.time;
-        return now - jumpLastTime > jumpHoldOffTime;
+        return canJump && now - jumpLastTime > jumpHoldOffTime;
     }
 
     private bool CanClimb()
     {
         float now = Time.time;
-        return now - climbLastTime > climbHoldOffTime;
+        return canClimb && now - climbLastTime > climbHoldOffTime;
     }
 
     private void Walk()
@@ -204,7 +212,7 @@ public class Movement : MonoBehaviour
             controller.Move(gameObject.transform.rotation * movement);
             if (!IsTouchingClimbable())
             {
-                if (move.y > 0 && CanJump())
+                if (move.y > 0)
                 {
                     playerVelocity.y += jumpHeight; //initial jump speed really
                 }
