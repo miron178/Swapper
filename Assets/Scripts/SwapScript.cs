@@ -14,10 +14,7 @@ public class SwapScript : MonoBehaviour
     private Component[] meshRenderer;
 
     //private layers
-    private int groundLayer;
     private int swapLayer;
-    private int wallLayer;
-    private int testLayer;
 
     //privates for swaps
     private GameObject objectInRange = null;
@@ -38,10 +35,7 @@ public class SwapScript : MonoBehaviour
     void Start()
     {
         //layer dependancies
-        groundLayer = LayerMask.NameToLayer("Ground");
-        testLayer = LayerMask.NameToLayer("Test");
         swapLayer = LayerMask.NameToLayer("Swappable");
-        wallLayer = LayerMask.NameToLayer("Wall");
 
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
 
