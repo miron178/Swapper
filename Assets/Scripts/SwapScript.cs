@@ -15,7 +15,7 @@ public class SwapScript : MonoBehaviour
 
     //private layers
     private int groundLayer;
-    private int SwapLayer;
+    private int swapLayer;
     private int wallLayer;
     private int testLayer;
 
@@ -40,7 +40,7 @@ public class SwapScript : MonoBehaviour
         //layer dependancies
         groundLayer = LayerMask.NameToLayer("Ground");
         testLayer = LayerMask.NameToLayer("Test");
-        SwapLayer = LayerMask.NameToLayer("Swappable");
+        swapLayer = LayerMask.NameToLayer("Swappable");
         wallLayer = LayerMask.NameToLayer("Wall");
 
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
@@ -84,14 +84,30 @@ public class SwapScript : MonoBehaviour
         }
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private bool Obstacle(GameObject other)
     {
-        if (active && other.gameObject.layer == LayerMask.NameToLayer("Swappable"))
+        int ignoreSwapLayer = ~(1 << swapLayer);
+        Debug.DrawLine(this.gameObject.transform.position, other.gameObject.transform.position);
+        return Physics.Linecast(this.gameObject.transform.position, other.gameObject.transform.position, ignoreSwapLayer);
+    }
+
+    private void MaybeInRange(GameObject other)
+    {
+        if (active && other.layer == swapLayer && !Obstacle(other))
         {
-            objectInRange = other.gameObject;
+            objectInRange = other;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        MaybeInRange(other.gameObject);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        MaybeInRange(other.gameObject);
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (active && objectInRange == other.gameObject)
