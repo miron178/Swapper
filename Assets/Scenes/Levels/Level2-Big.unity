@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1208bbe937c3a54488f1d85a7931055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecalAsset: {fileID: 0}
+  DecalAsset: {fileID: 11400000, guid: 0a7ecda0bc138484aa8e06bee9eb24bd, type: 2}
   Opacity: 1
   ZFadeDistance: 0.1
   MinAngleFadeDegrees: 83
@@ -2026,7 +2026,7 @@ PrefabInstance:
     - target: {fileID: 3611130079787102531, guid: 9d9b49cc8f5e6c54192c14be5e56d641,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.596066
+      value: -8.348
       objectReference: {fileID: 0}
     - target: {fileID: 3611130079787102531, guid: 9d9b49cc8f5e6c54192c14be5e56d641,
         type: 3}
@@ -8775,6 +8775,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2105ae80456711449bfc8c05aa5baf8d, type: 3}
+--- !u!4 &935346454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1564647738179524758, guid: 2105ae80456711449bfc8c05aa5baf8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 935346453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &955190875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20632,7 +20638,7 @@ MonoBehaviour:
   zoomSpeed: 0.2
   zoomMin: 0.5
   zoomMax: 2
-  m_currentTarget: {fileID: 0}
+  m_currentTarget: {fileID: 935346454}
 --- !u!1 &24615116465193281
 GameObject:
   m_ObjectHideFlags: 0
