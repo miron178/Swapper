@@ -13,10 +13,6 @@ public class WallDestroy : MonoBehaviour
             Instantiate(destroyedVersion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
-        if (other.gameObject.tag == "destroyedVersion")
-        {
-             Destroy(gameObject, 5.0f );
-        }
     }
 
 }

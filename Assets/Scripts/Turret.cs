@@ -10,7 +10,8 @@ public class Turret : MonoBehaviour
     public string enemyTag = "Player";
     public Transform partToRotate;
     public float turnSpeed = 10f;
-
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
 
     // Start is called before the first frame update
     void Start()
