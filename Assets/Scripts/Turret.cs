@@ -5,9 +5,12 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
 
-    public Transform target;
+    private Transform target;
     public float range = 15f;
-    public string enemyTag = "Slime";
+    public string enemyTag = "Player";
+    public Transform partToRotate;
+    public float turnSpeed = 10f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,17 +21,39 @@ public class Turret : MonoBehaviour
     void UpdateTarget()
     {
         GameObject[] enemy = GameObject.FindGameObjectsWithTag(enemyTag);
-
-        foreach (GameObject Slime in enemy)
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+        foreach (GameObject Player in enemy)
         {
-
+            float distanceToEnemy = Vector3.Distance(transform.position, Player.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = Player;
+            }
+        }
+        if (nearestEnemy != null && shortestDistance <= range)
+        {
+            target = nearestEnemy.transform;
+        }
+        else
+        {
+            target = null;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (target == null)
+            return;
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler (0f, rotation.y, 0f);
+
+
+
     }
 
     void OnDrawGizmosSelected ()
