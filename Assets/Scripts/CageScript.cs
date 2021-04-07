@@ -6,6 +6,7 @@ public class CageScript : MonoBehaviour
 {
     public GameObject cageGlassObject;
     public GameObject cageObject;
+    public GameObject cageLightObject;
 
     private bool CageOpen;
     private bool buttonPressed;
@@ -17,6 +18,7 @@ public class CageScript : MonoBehaviour
             CageOpen = !CageOpen;
             cageObject.GetComponent<Animator>().SetBool("CageOpen", CageOpen);
             cageGlassObject.GetComponent<Animator>().SetBool("CageOpen", CageOpen);
+            cageLightObject.GetComponent<Animator>().SetBool("CageOpen", CageOpen);
         }
     }
 }
