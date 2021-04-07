@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7440,7 +7440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54641e38c6ea7224fbf0837e7d1adc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayerMask: 0
+  canJump: 0
+  canClimb: 0
+  moveSpeed: 5
+  jumpHeight: 5
+  climbSpeed: 3
 --- !u!95 &780747903
 Animator:
   serializedVersion: 3
@@ -7496,6 +7500,18 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &780747906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780747897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5255b89e3c96a4cb69cc6b243c9496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &795790746
 GameObject:
   m_ObjectHideFlags: 0
@@ -9110,7 +9126,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f150910bef5923341b34fc94f2976496, type: 2}
+      objectReference: {fileID: 2100000, guid: 87c5e7a059f2f454a88202baa87f24a4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1874ecb18b4f2f488f73747d4e3a443, type: 3}
 --- !u!4 &982652019 stripped
@@ -10594,7 +10610,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54641e38c6ea7224fbf0837e7d1adc99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayerMask: 0
+  canJump: 0
+  canClimb: 0
+  moveSpeed: 5
+  jumpHeight: 5
+  climbSpeed: 3
 --- !u!114 &1168773720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19337,7 +19357,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7346f111ce3b0d1488b870102c3e3be8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 58.300003
+      value: 56.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7346f111ce3b0d1488b870102c3e3be8,
         type: 3}
