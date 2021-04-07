@@ -6,12 +6,17 @@ public class WallDestroy : MonoBehaviour
 {
     public GameObject destroyedVersion;
 
-	private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Strong")
         {
             Instantiate(destroyedVersion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "destroyedVersion")
+        {
+             Destroy(gameObject, 5.0f );
+        }
     }
+
 }
