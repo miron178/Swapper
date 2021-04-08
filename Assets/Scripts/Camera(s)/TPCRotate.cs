@@ -34,6 +34,8 @@ public class TPCRotate : MonoBehaviour
 	[SerializeField]
 	private Transform m_currentTarget;
 
+	private bool rotate = true;
+
 	private void LateUpdate()
 	{
 		if (!m_currentTarget)
@@ -56,15 +58,21 @@ public class TPCRotate : MonoBehaviour
 
 		zoomValueSmooth = Mathf.Lerp(zoomValueSmooth, zoomValue, zoomValueSmoothSpeed);
 
-
-		if (Input.GetKeyDown(KeyCode.LeftArrow))
+		float direction = Input.GetAxis("Camera Rotate");
+		if (direction < 0 && rotate)
 		{
 			horizontalAngleTarget -= 90.0f;
+			rotate = false;
 		}
-		else if (Input.GetKeyDown(KeyCode.RightArrow))
+		else if (direction > 0 && rotate)
 		{
 			horizontalAngleTarget += 90.0f;
+			rotate = false;
 		}
+        else if (direction == 0)
+        {
+			rotate = true;
+        }
 
 		//wrap around avoid overflow
 		if (horizontalAngleTarget < 0.0f)
