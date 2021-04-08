@@ -164,6 +164,9 @@ public class Movement : MonoBehaviour
         climbCameraAngle = (int)cameraRotation.angleTarget;
         climbWallNormal = normal;
 
+        //face the wall
+        gameObject.transform.rotation = Quaternion.LookRotation(normal * -1f);
+
         state = State.CLIMBING;
 
         playerVelocity.y = 0;
