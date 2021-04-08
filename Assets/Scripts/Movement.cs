@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour
     private float climbHoldOffTime = 2f; //in seconds
     private float climbLastTime = 0;
 
+    private Vector3 climbWallNormal = Vector3.forward;
+
     private int slimeLayer = 0;
 
     //Camera angle
@@ -160,8 +162,8 @@ public class Movement : MonoBehaviour
     private void StartClimb(Vector3 normal)
     {
         climbCameraAngle = (int)cameraRotation.angleTarget;
+        climbWallNormal = normal;
 
-        gameObject.transform.rotation = Quaternion.LookRotation(normal * -1f);
         state = State.CLIMBING;
 
         playerVelocity.y = 0;
@@ -187,8 +189,11 @@ public class Movement : MonoBehaviour
         }
         // else keep climbCameraAngle unchanged while moving
 
+        Quaternion wall = Quaternion.LookRotation(climbWallNormal * -1f);
+        Quaternion camera = Quaternion.Euler(0, climbCameraAngle, 0);
+        Quaternion relative = camera * Quaternion.Inverse(wall);
         Vector3 move;
-        switch (climbCameraAngle)
+        switch (relative.eulerAngles.y)
         {
             case 0:
             default:
@@ -251,5 +256,6 @@ public class Movement : MonoBehaviour
         GUI.Label(new Rect(0,  0, 200, 20), playerVelocity.x.ToString());
         GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
         GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
+        GUI.Label(new Rect(0, 45, 200, 20), cameraRotation.angleTarget.ToString());
     }
 }
