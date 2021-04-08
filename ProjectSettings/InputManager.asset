@@ -137,8 +137,8 @@ InputManager:
     m_Name: Camera Rotate
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
+    negativeButton: right
+    positiveButton: left
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
