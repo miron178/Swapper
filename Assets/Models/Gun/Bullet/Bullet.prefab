@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4069061278235495591}
   - component: {fileID: 5736018087372732861}
   - component: {fileID: -7693095974623195958}
+  - component: {fileID: -6249882379558714052}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5992789680757449238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.01, y: -7.29, z: 4.57}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,6 +93,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc65168863cc7b340b8cb3681ba8766d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 20
+--- !u!114 &-6249882379558714052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5992789680757449238}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a430d4ce97cf4428d9c53a0d779e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
   impacteEffect: {fileID: 7744927883446240630, guid: e29d3a9f6b44d0a44b5b5445176b1310,
     type: 3}

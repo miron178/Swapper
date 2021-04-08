@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 4891891400381150410}
   - component: {fileID: 4929686986450326311}
   - component: {fileID: 4879901055708978790}
+  - component: {fileID: 3958994428870445575}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Gun
@@ -318,7 +319,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  enemyTag: Player
+  slimeTag: Player
+  partToRotate: {fileID: 2372368407829137551}
+  turnSpeed: 10
+  fireRate: 1
+  bulletPrefab: {fileID: 5992789680757449238, guid: 0d2928becc0276844961cfab47245967,
+    type: 3}
+  firePoint: {fileID: 39024610945724388}
+--- !u!114 &3958994428870445575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235625761401073264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80aab525ba64c164ca41129d69b18e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  armouredTag: Armoured
   partToRotate: {fileID: 2372368407829137551}
   turnSpeed: 10
   fireRate: 1
