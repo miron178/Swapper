@@ -8,11 +8,20 @@ public class WallDestroy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Strong")
+        if (Input.GetKey("space"))
         {
-            Instantiate(destroyedVersion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if (other.gameObject.tag == "Strong")
+            {
+                StartCoroutine(HoldOn());
+                Debug.Log("Hold On");
+            }
+            return;
         }
     }
-
+    IEnumerator HoldOn()
+    {
+        yield return new WaitForSeconds(2f);
+        Instantiate(destroyedVersion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
 }

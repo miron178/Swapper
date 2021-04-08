@@ -7370,7 +7370,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.17, y: 1, z: 2.04}
+  m_Size: {x: 3.17, y: 1, z: 2.5}
   m_Center: {x: 0, y: 0.5, z: 0.28}
 --- !u!54 &780747900
 Rigidbody:
@@ -7434,7 +7434,7 @@ Animator:
   m_GameObject: {fileID: 780747897}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab340d897f4cddb4993cd552192d52af, type: 2}
+  m_Controller: {fileID: 9100000, guid: 776cffc5a5746344a81e52c8c6e0e628, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12753,8 +12753,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5905512, y: 0.07874018, z: 0.7874017}
-  m_Center: {x: 0, y: 0, z: 0.39370087}
+  m_Size: {x: 0.5905512, y: 0.34, z: 0.7874017}
+  m_Center: {x: 0, y: -0.12, z: 0.39370087}
 --- !u!1001 &1379500520
 PrefabInstance:
   m_ObjectHideFlags: 0
