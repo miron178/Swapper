@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class TurretTargetSlime : MonoBehaviour
 {
 
-    private Transform target;
+    private Transform slimeTarget;
     public float range = 15f;
-    public string enemyTag = "Player";
+    public string slimeTag = "Player";
 
     public Transform partToRotate;
     public float turnSpeed = 10f;
@@ -26,10 +26,10 @@ public class Turret : MonoBehaviour
 
     void UpdateTarget()
     {
-        GameObject[] enemy = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject[] Slime = GameObject.FindGameObjectsWithTag(slimeTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
-        foreach (GameObject Player in enemy)
+        foreach (GameObject Player in Slime)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, Player.transform.position);
             if (distanceToEnemy < shortestDistance)
@@ -40,20 +40,20 @@ public class Turret : MonoBehaviour
         }
         if (nearestEnemy != null && shortestDistance <= range)
         {
-            target = nearestEnemy.transform;
+            slimeTarget = nearestEnemy.transform;
         }
         else
         {
-            target = null;
+            slimeTarget = null;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
+        if (slimeTarget == null)
             return;
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = slimeTarget.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler (0f, rotation.y, 0f);
@@ -68,12 +68,15 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        bulletPrefab.GetComponent<BulletArmoured>().enabled = false;
+        bulletPrefab.GetComponent<BulletSlime>().enabled = true;
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
+        BulletSlime bulletSlime = bulletGO.GetComponent<BulletSlime>();
 
-        if (bullet != null)
+        if (bulletSlime != null)
         {
-            bullet.Seek(target);
+            bulletSlime.Seek(slimeTarget);
+            return;
         }
     }
 
