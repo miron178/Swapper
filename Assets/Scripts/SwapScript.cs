@@ -43,7 +43,7 @@ public class SwapScript : MonoBehaviour
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
 
         movementScript  = GetComponent<Movement>();
-        animationScript = GetComponent<AnimationController>();
+        animationScript = GetComponentInChildren<AnimationController>();
     }
 
     void FixedUpdate()
