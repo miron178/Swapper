@@ -137,7 +137,7 @@ public class Movement : MonoBehaviour
     {
         UpdatePlayerVelocityXZ();
 
-        if (Input.GetButtonDown("Jump") && CanJump())
+        if (Input.GetButtonDown("Action") && CanJump())
         {
             playerVelocity.y += jumpHeight; //initial jump speed really
             StartFall();
@@ -177,7 +177,7 @@ public class Movement : MonoBehaviour
 
     private void Climb()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Action"))
         {
             StartFall();
             return;

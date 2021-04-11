@@ -30,13 +30,13 @@ public class AnimationController : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        if (!isPunching && Input.GetButtonDown("Jump"))
+        if (!isPunching && Input.GetButtonDown("Action"))
         {
             animator.SetBool("isPunching", true);
         }
 
         // if player stops pressing w key, stop walking anim
-        if (isPunching && Input.GetButtonUp("Jump"))
+        if (isPunching && Input.GetButtonUp("Action"))
         {
             animator.SetBool("isPunching", false);
         }
