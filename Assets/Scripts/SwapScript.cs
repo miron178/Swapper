@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SwapScript : MonoBehaviour
 {
-    public Movement movementScript;
+    private Movement movementScript;
+    private AnimationController animationScript;
 
     //privates for active
     [SerializeField]
@@ -41,7 +42,8 @@ public class SwapScript : MonoBehaviour
 
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
 
-        movementScript = GetComponent<Movement>();
+        movementScript  = GetComponent<Movement>();
+        animationScript = GetComponent<AnimationController>();
     }
 
     void FixedUpdate()
@@ -55,6 +57,7 @@ public class SwapScript : MonoBehaviour
                 renderer.material = active ? green : yellow;
             }
             movementScript.enabled = active;
+            animationScript.enabled = active;
         }
 
         if (active)
