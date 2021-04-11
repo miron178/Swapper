@@ -7370,8 +7370,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.17, y: 1, z: 2.5}
-  m_Center: {x: 0, y: 0.5, z: 0.28}
+  m_Size: {x: 3.17, y: 1, z: 2.24}
+  m_Center: {x: 0, y: 0.5, z: 0.37}
 --- !u!54 &780747900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7400,7 +7400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6e6a9068683694c854d5122235759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScript: {fileID: 780747902}
   active: 0
   spawnPoint: {fileID: 1578126456}
   slimePrefab: {fileID: 1564647738179524753, guid: 2105ae80456711449bfc8c05aa5baf8d,
@@ -12753,8 +12752,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5905512, y: 0.22, z: 0.7874017}
-  m_Center: {x: 0, y: -0.06, z: 0.39370087}
+  m_Size: {x: 0.5905512, y: 0.19, z: 0.7874017}
+  m_Center: {x: 0, y: -0.09, z: 0.39370087}
 --- !u!65 &1373513421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12766,8 +12765,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5905512, y: 0.15, z: 0.78740174}
-  m_Center: {x: 0, y: 0, z: 0.3937009}
+  m_Size: {x: 0.5905512, y: 0.15, z: 0.7874017}
+  m_Center: {x: 0, y: 0, z: 0.39370087}
 --- !u!1001 &1379500520
 PrefabInstance:
   m_ObjectHideFlags: 0

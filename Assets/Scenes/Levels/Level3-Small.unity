@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2974,7 +2974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineColor: {r: 0.23137257, g: 0.32156864, b: 0.4901961, a: 1}
   outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
@@ -7086,17 +7086,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d8b8284a9bc0ae0489a80681eeff3fed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14
+      value: -16.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b8284a9bc0ae0489a80681eeff3fed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b8284a9bc0ae0489a80681eeff3fed,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 76.823
+      value: 76.77
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8b8284a9bc0ae0489a80681eeff3fed,
         type: 3}
@@ -11344,7 +11344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6e6a9068683694c854d5122235759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementScript: {fileID: 981312862}
   active: 0
   spawnPoint: {fileID: 653150834}
   slimePrefab: {fileID: 1564647738179524753, guid: 2105ae80456711449bfc8c05aa5baf8d,

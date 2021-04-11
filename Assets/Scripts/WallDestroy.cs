@@ -8,7 +8,7 @@ public class WallDestroy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey("space"))
+        if (Input.GetAxis("Action") !=0)
         {
             if (other.gameObject.tag == "Strong")
             {
