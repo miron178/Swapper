@@ -15,7 +15,7 @@ public class AnimationController : MonoBehaviour
     void Update()
     {
         bool isWalking = animator.GetBool("isWalking");
-        bool keyPressed = Input.GetKey("w") | Input.GetKey("a") | Input.GetKey("s") | Input.GetKey("d");
+        bool keyPressed = Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
         bool isPunching = animator.GetBool("isPunching");
 
         //if player pressed w key play walking anim
@@ -30,13 +30,13 @@ public class AnimationController : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        if (!isPunching && Input.GetKeyDown("space"))
+        if (!isPunching && Input.GetButtonDown("Jump"))
         {
             animator.SetBool("isPunching", true);
         }
 
         // if player stops pressing w key, stop walking anim
-        if (isPunching && Input.GetKeyUp("space"))
+        if (isPunching && Input.GetButtonUp("Jump"))
         {
             animator.SetBool("isPunching", false);
         }
