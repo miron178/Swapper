@@ -801,6 +801,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1208bbe937c3a54488f1d85a7931055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DecalAsset: {fileID: 11400000, guid: 0a7ecda0bc138484aa8e06bee9eb24bd, type: 2}
+  Opacity: 1
+  ZFadeDistance: 0.1
+  MinAngleFadeDegrees: 83
+  MaxAngleFadeDegrees: 85
+  IsFlipU: 0
+  IsFlipV: 0
+  DrawOrder: 0
+  ShouldUseSceneStaticMeshes: 1
+  MeshesToProjectAgainst: []
+  ShouldReprojectOnMove: 0
+  positionOfProjection: {x: 0, y: 0, z: 0}
+  scaleOfProjection: {x: 0, y: 0, z: 0}
+  rotationOfProjection: {x: 0, y: 0, z: 0, w: 0}
+  isMeshUnprojected: 0
 --- !u!23 &71794871
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6170,7 +6185,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 993bd3207f1f83e49b371835f8fc653a, type: 2}
+      objectReference: {fileID: 2100000, guid: 30c800bf6206d754bbc1ee01646495a8, type: 2}
     - target: {fileID: 919132149155446097, guid: 17c127a30151d3943b6a1fd3a556d60f,
         type: 3}
       propertyPath: m_Name
@@ -7433,7 +7448,7 @@ Animator:
   m_GameObject: {fileID: 780747897}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 776cffc5a5746344a81e52c8c6e0e628, type: 2}
+  m_Controller: {fileID: 9100000, guid: ab340d897f4cddb4993cd552192d52af, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
