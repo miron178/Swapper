@@ -9,6 +9,7 @@ public class AnimationController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -40,5 +41,6 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("isPunching", false);
         }
+
     }
 }
