@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level4-Armoured.unity
     guid: ad9eb7171d6721845806d4a9abceb6ca
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: cd57673d2d3b01c49a5f8af4fb633355
   m_configObjects: {}
