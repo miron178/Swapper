@@ -21,4 +21,10 @@ public class MenuScript : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
