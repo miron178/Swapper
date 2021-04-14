@@ -787,6 +787,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 68516700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &68516702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1873756265362823950, guid: c7685e6fe07df354abd675c114978ad9,
+    type: 3}
+  m_PrefabInstance: {fileID: 68516700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &68516703 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1709387506869389221, guid: c7685e6fe07df354abd675c114978ad9,
+    type: 3}
+  m_PrefabInstance: {fileID: 68516700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &79999583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12902,7 +12914,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472776107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d5255b89e3c96a4cb69cc6b243c9496, type: 3}
   m_Name: 
@@ -16030,6 +16042,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6560753038246657142, guid: fcbabd0b7318bae48b02ed0fa0f379cf,
+        type: 3}
+      propertyPath: doorObjectL
+      value: 
+      objectReference: {fileID: 68516703}
+    - target: {fileID: 6560753038246657142, guid: fcbabd0b7318bae48b02ed0fa0f379cf,
+        type: 3}
+      propertyPath: doorObjectR
+      value: 
+      objectReference: {fileID: 68516702}
     - target: {fileID: 6560753038246657143, guid: fcbabd0b7318bae48b02ed0fa0f379cf,
         type: 3}
       propertyPath: m_Name

@@ -6,7 +6,7 @@ public class WallDestroy : MonoBehaviour
 {
     public GameObject destroyedVersion;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (Input.GetAxis("Action") !=0)
         {
