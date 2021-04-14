@@ -11,6 +11,12 @@ public class AnimationController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void OnDisable()
+    {
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isPunching", false);
+    }
+
     // Update is called once per frame
     void Update()
     {
