@@ -39,6 +39,10 @@ public class Movement : MonoBehaviour
     {
         cameraRotation = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<TPCRotate>();
         cameraRotation.SetCurrentTarget(transform); //look at me
+
+        playerVelocity = Vector3.zero;
+        jumpLastTime = 0;
+        climbLastTime = 0;
     }
 
     private void Start()

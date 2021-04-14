@@ -13,10 +13,15 @@ public class SwapScript : MonoBehaviour
     private bool active = false;
     private bool lastActive = false;
     private Component[] meshRenderer;
+    private Component[] skinnedMeshRenderer;
 
     //private layers
     private int swapLayer;
     private int slimeLayer;
+    
+    private int smallLayer;
+    private int strongLayer;
+    private int armourLayer;
 
     //privates for swaps
     private GameObject objectInRange = null;
@@ -30,19 +35,21 @@ public class SwapScript : MonoBehaviour
 
     //materials
     [SerializeField]
-    private Material green;
+    private Material activeMat;
     [SerializeField]
-    private Material yellow;
+    private Material inactiveMat;
+
 
     void Start()
     {
         //layer dependancies
         swapLayer = LayerMask.NameToLayer("Swappable");
         slimeLayer = LayerMask.NameToLayer("Slime");
-
+        
         meshRenderer = this.GetComponentsInChildren<MeshRenderer>();
+        skinnedMeshRenderer = this.GetComponentsInChildren<SkinnedMeshRenderer>();
 
-        movementScript  = GetComponent<Movement>();
+        movementScript = GetComponent<Movement>();
         animationScript = GetComponentInChildren<AnimationController>();
     }
 
@@ -52,10 +59,23 @@ public class SwapScript : MonoBehaviour
         {
             lastActive = active;
 
-            foreach (MeshRenderer renderer in meshRenderer)
+            Material material = active ? activeMat : inactiveMat;
+            if (material)
             {
-                renderer.material = active ? green : yellow;
+                foreach (MeshRenderer renderer in meshRenderer)
+                {
+                    renderer.material = material;
+                }
+                foreach (SkinnedMeshRenderer renderer in skinnedMeshRenderer)
+                {
+                    renderer.material = material;
+                }
             }
+            else
+            {
+                Debug.LogWarning((active ? "Active" : "Inactive") +" material is missing!");
+            }
+
             movementScript.enabled = active;
             animationScript.enabled = active;
         }
