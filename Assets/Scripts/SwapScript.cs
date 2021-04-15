@@ -7,6 +7,7 @@ public class SwapScript : MonoBehaviour
 {
     private Movement movementScript;
     private AnimationController animationScript;
+    private AudioCreatures audioCreaturesScript;
 
     //privates for active
     [SerializeField]
@@ -51,6 +52,7 @@ public class SwapScript : MonoBehaviour
 
         movementScript = GetComponent<Movement>();
         animationScript = GetComponentInChildren<AnimationController>();
+        audioCreaturesScript = GetComponentInChildren<AudioCreatures>();
     }
 
     void FixedUpdate()
@@ -78,6 +80,7 @@ public class SwapScript : MonoBehaviour
 
             movementScript.enabled = active;
             animationScript.enabled = active;
+            audioCreaturesScript.enabled = active;
         }
 
         if (active)
