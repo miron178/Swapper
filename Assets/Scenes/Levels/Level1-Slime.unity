@@ -5208,7 +5208,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8134373274627365808, guid: 2105ae80456711449bfc8c05aa5baf8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8675799229447954234, guid: 2105ae80456711449bfc8c05aa5baf8d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2105ae80456711449bfc8c05aa5baf8d, type: 3}
 --- !u!1001 &845489757
 PrefabInstance:
@@ -12109,7 +12115,7 @@ PrefabInstance:
     - target: {fileID: 3571674555201586581, guid: e34c8a402497c5341acb3a6e58308240,
         type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.316
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3571674555201586581, guid: e34c8a402497c5341acb3a6e58308240,
         type: 3}

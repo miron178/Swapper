@@ -46,7 +46,7 @@ MonoBehaviour:
   sounds:
   - name: BackgroundMusic
     clip: {fileID: 8300000, guid: 273154714f3284a4dbe92f51b5e14c18, type: 3}
-    volume: 0.071
+    volume: 0.1
     pitch: 1
     loop: 1
     spatialBlend: 0
@@ -56,12 +56,40 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
-    spatialBlend: 0
+    spatialBlend: 1
     source: {fileID: 0}
   - name: SlimeWalk
     clip: {fileID: 8300000, guid: 949024e36177fd947ab0f63292baf9d3, type: 3}
     volume: 1
     pitch: 1
     loop: 1
-    spatialBlend: 0
+    spatialBlend: 1
+    source: {fileID: 0}
+  - name: ArmourWalk
+    clip: {fileID: 8300000, guid: a86e6e1ddaf309845a07e371a1f8c4fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    spatialBlend: 1
+    source: {fileID: 0}
+  - name: SmallWalk
+    clip: {fileID: 8300000, guid: 7bdf3aaf50ef78a4d9faabf43698e929, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    spatialBlend: 1
+    source: {fileID: 0}
+  - name: BigChicken
+    clip: {fileID: 8300000, guid: f594b83da62a86846b3326baf94690bc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    spatialBlend: 1
+    source: {fileID: 0}
+  - name: BigWalk
+    clip: {fileID: 8300000, guid: 00d5c057c11b7a846b644028fd5663d3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    spatialBlend: 1
     source: {fileID: 0}
