@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2754052682846883000}
   - component: {fileID: 1126168651662538984}
   - component: {fileID: 911713086055962302}
+  - component: {fileID: 5345308473013541000}
   m_Layer: 0
   m_Name: Drawer003
   m_TagString: Untagged
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5345308473013541000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992480461963254495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5826771, y: 0.5669293, z: 0.36220467}
+  m_Center: {x: 0.015748069, y: 0, z: 0}
 --- !u!1 &2831395394250902724
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +104,7 @@ GameObject:
   - component: {fileID: 3750511053143384808}
   - component: {fileID: 2290617857786670763}
   - component: {fileID: 1029226230118188897}
+  - component: {fileID: 7809791632921180991}
   m_Layer: 0
   m_Name: Drawer004
   m_TagString: Untagged
@@ -158,6 +173,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7809791632921180991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831395394250902724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5826771, y: 0.5669293, z: 0.34645668}
+  m_Center: {x: 0.015748069, y: 0, z: 0}
 --- !u!1 &4588746858658787361
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +197,7 @@ GameObject:
   - component: {fileID: 713019689048937563}
   - component: {fileID: 8000196107066420074}
   - component: {fileID: 6787647689616526592}
+  - component: {fileID: 6708102540948088875}
   m_Layer: 0
   m_Name: Box007
   m_TagString: Untagged
@@ -237,6 +266,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6708102540948088875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588746858658787361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62992126, y: 0.62992144, z: 1.5748035}
+  m_Center: {x: 0, y: 0, z: 0.78740174}
 --- !u!1 &6543884607043881353
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +290,7 @@ GameObject:
   - component: {fileID: 6077752557283167918}
   - component: {fileID: 6492750369425765386}
   - component: {fileID: 7625464800507652384}
+  - component: {fileID: 6126283627956890442}
   m_Layer: 0
   m_Name: Drawer001
   m_TagString: Untagged
@@ -316,6 +359,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6126283627956890442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543884607043881353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5826771, y: 0.5669293, z: 0.34645668}
+  m_Center: {x: 0.015748069, y: 0, z: 0}
 --- !u!1 &7351144429446655369
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +418,7 @@ GameObject:
   - component: {fileID: 2088456051791842529}
   - component: {fileID: 6494753799983488200}
   - component: {fileID: 5433330312377336635}
+  - component: {fileID: 3450319646986387671}
   m_Layer: 0
   m_Name: Drawer002
   m_TagString: Untagged
@@ -430,3 +487,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3450319646986387671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8104808515436932414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5826771, y: 0.5669293, z: 0.36220467}
+  m_Center: {x: 0.015748069, y: 0, z: 0}

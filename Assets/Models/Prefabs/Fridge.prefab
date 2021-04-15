@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2560649541637986159}
   - component: {fileID: 4820239433681495422}
   - component: {fileID: 72965321284658418}
+  - component: {fileID: 2772266795352844839}
   m_Layer: 0
   m_Name: FridgeDoorBottom
   m_TagString: Untagged
@@ -80,6 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2772266795352844839
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78280066498152252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01935069, y: 0.27998218, z: 0.33267716}
+  m_Center: {x: 0.0096758315, y: -0.1368906, z: 0.01194405}
 --- !u!1 &1510508707762338017
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +105,7 @@ GameObject:
   - component: {fileID: 2378576578100642007}
   - component: {fileID: 1129323042300645814}
   - component: {fileID: 7419752800458957740}
+  - component: {fileID: 4761446935348705174}
   m_Layer: 0
   m_Name: FridgeDoorTop
   m_TagString: Untagged
@@ -160,6 +175,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4761446935348705174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510508707762338017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01935069, y: 0.27998218, z: 0.25119296}
+  m_Center: {x: 0.0096758315, y: -0.13689072, z: 0.015559083}
 --- !u!1 &2745143349564220353
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +650,7 @@ GameObject:
   - component: {fileID: 2617772952894623184}
   - component: {fileID: 4973563425651950146}
   - component: {fileID: 2312859415584649980}
+  - component: {fileID: 8002705656010638667}
   m_Layer: 0
   m_Name: Fridge 1
   m_TagString: Untagged
@@ -690,6 +719,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8002705656010638667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282844299523694305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23719145, y: 0.27998218, z: 0.58780706}
+  m_Center: {x: 0.026391566, y: -0.0000000015730657, z: 0.29390353}
 --- !u!1 &5836020262162729697
 GameObject:
   m_ObjectHideFlags: 0

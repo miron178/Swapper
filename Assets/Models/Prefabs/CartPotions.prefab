@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 3.5475545, y: 3.5475545, z: 3.5475545}
   m_Children: []
   m_Father: {fileID: 314443685705934925}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1073266362741298980
 MeshFilter:
@@ -167,6 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314443685705934925}
+  - component: {fileID: 2152669010031470706}
   m_Layer: 0
   m_Name: CartPotions
   m_TagString: Untagged
@@ -185,10 +186,10 @@ Transform:
   m_LocalPosition: {x: 47.00053, y: 0.51, z: 23.81283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4508595987929441004}
+  - {fileID: 3233078253683391727}
   - {fileID: 2497790638205976266}
   - {fileID: 5565604395013719197}
-  - {fileID: 3233078253683391727}
+  - {fileID: 4508595987929441004}
   - {fileID: 659674117958250085}
   - {fileID: 5227252650650617570}
   - {fileID: 4759493280754165053}
@@ -198,6 +199,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
+--- !u!65 &2152669010031470706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087320728831636215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3409805, y: 2.7149372, z: 2.342329}
+  m_Center: {x: -0.13346368, y: 1.0502033, z: -0.14717698}
 --- !u!1 &1756701546544256477
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +456,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 314443685705934925}
     m_Modifications:
+    - target: {fileID: 3764063435146788858, guid: 77d155e13a985fd4dbd3267f6208866f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3764063435146788858, guid: 77d155e13a985fd4dbd3267f6208866f,
         type: 3}
       propertyPath: m_LocalPosition.x
