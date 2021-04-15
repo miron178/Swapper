@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3394067312027279533}
-  m_LocalRotation: {x: 0.9241434, y: 0.000000085393914, z: 0.38204598, w: -0.00000020656208}
-  m_LocalPosition: {x: 0, y: 0.25, z: -3.18}
+  m_LocalRotation: {x: 0.99999976, y: -1.5403855e-10, z: -0.000688903, w: -0.00000022351723}
+  m_LocalPosition: {x: 1.78, y: 0.25, z: -3.52}
   m_LocalScale: {x: 1, y: 1, z: 3.387926}
   m_Children: []
   m_Father: {fileID: 4891891400381150410}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -44.92099, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0.07899475, z: -0.000015258789}
 --- !u!33 &2199353131932886121
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72530d6d50689d442a5d273c62e8e1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 12
   slimeTag: Player
   partToRotate: {fileID: 2372368407829137551}
   turnSpeed: 10
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80aab525ba64c164ca41129d69b18e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 12
   armouredTag: Armoured
   partToRotate: {fileID: 2372368407829137551}
   turnSpeed: 10

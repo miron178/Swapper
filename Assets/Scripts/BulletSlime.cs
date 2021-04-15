@@ -31,6 +31,5 @@ public class BulletSlime : MonoBehaviour
             return;
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-
     }
 }

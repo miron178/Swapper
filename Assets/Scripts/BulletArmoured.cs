@@ -34,7 +34,5 @@ public class BulletArmoured : MonoBehaviour
             
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-
     }
-
 }
