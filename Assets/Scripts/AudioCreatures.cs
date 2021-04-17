@@ -23,6 +23,10 @@ public class AudioCreatures : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("SlimeWalk");
             }
         }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("SlimeWalk");
+        }
 
         if (gameObject.tag == "Armoured")
         {
@@ -30,6 +34,10 @@ public class AudioCreatures : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("ArmourWalk");
             }
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("ArmourWalk");
         }
 
         if (gameObject.tag == "Small")
@@ -39,6 +47,10 @@ public class AudioCreatures : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("SmallWalk");
             }
         }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("SmallWalk");
+        }
 
         if (gameObject.tag == "Strong")
         {
@@ -47,6 +59,10 @@ public class AudioCreatures : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("BigChickens");
             }
         }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("BigChickens");
+        }
 
         if (gameObject.tag == "Strong")
         {
@@ -54,6 +70,10 @@ public class AudioCreatures : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("BigWalk");
             }
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().StopPlaying("BigWalk");
         }
 
     }

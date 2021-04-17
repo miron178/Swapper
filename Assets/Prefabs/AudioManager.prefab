@@ -52,7 +52,7 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
   - name: DoorOpening
-    clip: {fileID: 8300000, guid: df433adef8efaf14d9785b17132388d6, type: 3}
+    clip: {fileID: 8300000, guid: 773c32fe27c125e4f91161a6200f62c3, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SlimeWalk
     clip: {fileID: 8300000, guid: 949024e36177fd947ab0f63292baf9d3, type: 3}
-    volume: 1
+    volume: 0.677
     pitch: 1
     loop: 1
     spatialBlend: 1
