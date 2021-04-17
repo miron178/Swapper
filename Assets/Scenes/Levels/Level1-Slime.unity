@@ -16028,6 +16028,75 @@ Transform:
   m_Father: {fileID: 1199956413}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5343966410297850842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.475159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6487820062540159483, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292815555718240499, guid: 2ee6884e94c3efa4a97f3277ee8c854d,
+        type: 3}
+      propertyPath: m_Name
+      value: KillCollider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ee6884e94c3efa4a97f3277ee8c854d, type: 3}
 --- !u!1 &5595935813589304445
 GameObject:
   m_ObjectHideFlags: 0
