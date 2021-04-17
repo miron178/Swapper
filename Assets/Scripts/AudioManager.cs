@@ -1,6 +1,7 @@
 ﻿using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -40,6 +41,27 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         Play("BackgroundMusic");
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string SceneName = currentScene.name;
+
+        if (SceneName == "EndScreen")
+        {
+            StopPlaying("SlimeWalk");
+            StopPlaying("BigWalk");
+            StopPlaying("ArmourWalk");
+            StopPlaying("SmallWalk");
+            StopPlaying("BigChicken");
+        }
+        else if (SceneName == "MainMenu")
+        {
+            StopPlaying("SlimeWalk");
+            StopPlaying("BigWalk");
+            StopPlaying("ArmourWalk");
+            StopPlaying("SmallWalk");
+            StopPlaying("BigChicken");
+        }
+
     }
 
     public void Play (string name)
@@ -66,10 +88,7 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
-    
-
-
-
-    //code to make the sound
+   
+    //code to make the sound play
     //FindObjectOfType<AudioManager>().Play("NameOfAudio");
 }

@@ -56,12 +56,12 @@ public class AudioCreatures : MonoBehaviour
         {
             if (isWalking == true)
             {
-                FindObjectOfType<AudioManager>().Play("BigChickens");
+                FindObjectOfType<AudioManager>().Play("BigChicken");
             }
         }
         else
         {
-            FindObjectOfType<AudioManager>().StopPlaying("BigChickens");
+            FindObjectOfType<AudioManager>().StopPlaying("BigChicken");
         }
 
         if (gameObject.tag == "Strong")
