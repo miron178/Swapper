@@ -402,21 +402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1208bbe937c3a54488f1d85a7931055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecalAsset: {fileID: 11400000, guid: 0a7ecda0bc138484aa8e06bee9eb24bd, type: 2}
-  Opacity: 1
-  ZFadeDistance: 0.1
-  MinAngleFadeDegrees: 83
-  MaxAngleFadeDegrees: 85
-  IsFlipU: 0
-  IsFlipV: 0
-  DrawOrder: 0
-  ShouldUseSceneStaticMeshes: 1
-  MeshesToProjectAgainst: []
-  ShouldReprojectOnMove: 0
-  positionOfProjection: {x: 0, y: 0, z: 0}
-  scaleOfProjection: {x: 0, y: 0, z: 0}
-  rotationOfProjection: {x: 0, y: 0, z: 0, w: 0}
-  isMeshUnprojected: 0
 --- !u!23 &100143117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -497,7 +482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &113857109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3565,21 +3550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1208bbe937c3a54488f1d85a7931055a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecalAsset: {fileID: 0}
-  Opacity: 1
-  ZFadeDistance: 0.1
-  MinAngleFadeDegrees: 83
-  MaxAngleFadeDegrees: 85
-  IsFlipU: 0
-  IsFlipV: 0
-  DrawOrder: 0
-  ShouldUseSceneStaticMeshes: 1
-  MeshesToProjectAgainst: []
-  ShouldReprojectOnMove: 0
-  positionOfProjection: {x: 0, y: 0, z: 0}
-  scaleOfProjection: {x: 0, y: 0, z: 0}
-  rotationOfProjection: {x: 0, y: 0, z: 0, w: 0}
-  isMeshUnprojected: 0
 --- !u!23 &786424831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6918,7 +6888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1930586716
 MonoBehaviour:
   m_ObjectHideFlags: 0

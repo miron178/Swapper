@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13939,6 +13939,7 @@ Transform:
   - {fileID: 1112226085}
   - {fileID: 1610798196}
   - {fileID: 929012879}
+  - {fileID: 2036016478243569962}
   - {fileID: 1335459132}
   - {fileID: 914095797}
   - {fileID: 798369212}
@@ -13955,13 +13956,11 @@ Transform:
   - {fileID: 1855136674}
   - {fileID: 1120060392}
   - {fileID: 2106875361}
-  - {fileID: 2036016478243569962}
   - {fileID: 214262511}
   - {fileID: 947048339}
   - {fileID: 725109630}
   - {fileID: 1426274572}
   - {fileID: 947769581}
-  - {fileID: 1754611724}
   - {fileID: 1199260502}
   - {fileID: 1750800458}
   - {fileID: 353384489}
@@ -13979,17 +13978,18 @@ Transform:
   - {fileID: 883741706}
   - {fileID: 2011129050}
   - {fileID: 613983269}
+  - {fileID: 1754611724}
   - {fileID: 68516701}
   - {fileID: 49594499}
   - {fileID: 1665568775}
   - {fileID: 817507442}
+  - {fileID: 1188865344}
   - {fileID: 645550869}
   - {fileID: 613355185}
-  - {fileID: 1188865344}
-  - {fileID: 250383166}
   - {fileID: 2125093592}
   - {fileID: 774487998}
   - {fileID: 1309584483}
+  - {fileID: 250383166}
   - {fileID: 1630541792}
   - {fileID: 192217857}
   - {fileID: 1443107339}
@@ -16861,8 +16861,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.77245307, y: 0.7587619, z: 2.3749752}
-  m_Center: {x: -0.0022831766, y: 0.3601151, z: -0.54122835}
+  m_Size: {x: 0.77245307, y: 0.7587619, z: 0.7}
+  m_Center: {x: -0.0022831766, y: 0.3601151, z: 0.09}
 --- !u!95 &1472776116
 Animator:
   serializedVersion: 3
@@ -18668,25 +18668,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1687770247}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1687770249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6560753038246657143, guid: fcbabd0b7318bae48b02ed0fa0f379cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1687770247}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1687770250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687770249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1fbde605052214bafd97031c13fa60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barsObject: {fileID: 724834123}
 --- !u!1001 &1690347390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20967,7 +20948,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6560753038246657142, guid: fcbabd0b7318bae48b02ed0fa0f379cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fcbabd0b7318bae48b02ed0fa0f379cf, type: 3}
 --- !u!4 &1889617266 stripped
 Transform:
@@ -24071,7 +24053,7 @@ Transform:
   - {fileID: 724834124}
   - {fileID: 3216956881049505666}
   m_Father: {fileID: 1199956413}
-  m_RootOrder: 83
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -270}
 --- !u!33 &2476582162246323650
 MeshFilter:
