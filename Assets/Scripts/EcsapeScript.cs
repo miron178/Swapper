@@ -14,7 +14,7 @@ public class EcsapeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Esc") != 0)
+        if (Input.GetKeyDown("escape"))
         {
             Debug.Log("Main Menu");
             SceneManager.LoadScene("MainMenu");
