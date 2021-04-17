@@ -60,7 +60,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: SlimeWalk
     clip: {fileID: 8300000, guid: 949024e36177fd947ab0f63292baf9d3, type: 3}
-    volume: 0.677
+    volume: 0.406
     pitch: 1
     loop: 1
     spatialBlend: 1

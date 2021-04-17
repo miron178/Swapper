@@ -41,27 +41,6 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         Play("BackgroundMusic");
-
-        Scene currentScene = SceneManager.GetActiveScene();
-        string SceneName = currentScene.name;
-
-        if (SceneName == "EndScreen")
-        {
-            StopPlaying("SlimeWalk");
-            StopPlaying("BigWalk");
-            StopPlaying("ArmourWalk");
-            StopPlaying("SmallWalk");
-            StopPlaying("BigChicken");
-        }
-        else if (SceneName == "MainMenu")
-        {
-            StopPlaying("SlimeWalk");
-            StopPlaying("BigWalk");
-            StopPlaying("ArmourWalk");
-            StopPlaying("SmallWalk");
-            StopPlaying("BigChicken");
-        }
-
     }
 
     public void Play (string name)

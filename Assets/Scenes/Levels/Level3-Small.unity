@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -14208,6 +14208,7 @@ Transform:
   - {fileID: 1451543406}
   - {fileID: 238792836}
   - {fileID: 1809107534}
+  - {fileID: 2072886728}
   - {fileID: 793801786}
   - {fileID: 1218837035}
   - {fileID: 2004635620}
@@ -14218,14 +14219,13 @@ Transform:
   - {fileID: 1082115513}
   - {fileID: 1451026346}
   - {fileID: 1605978633}
-  - {fileID: 2072886728}
   - {fileID: 248825973}
+  - {fileID: 2004064368}
   - {fileID: 92114797}
   - {fileID: 1121606953}
   - {fileID: 2133024259}
   - {fileID: 1705723975}
   - {fileID: 2047218598}
-  - {fileID: 2004064368}
   - {fileID: 828404253}
   - {fileID: 2140495675}
   - {fileID: 771445851}
@@ -24438,7 +24438,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1199956413}
-  m_RootOrder: 102
+  m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -360}
 --- !u!65 &2004064369
 BoxCollider:
@@ -25627,7 +25627,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1199956413}
-  m_RootOrder: 95
+  m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -360}
 --- !u!65 &2072886729
 BoxCollider:
@@ -26306,6 +26306,7 @@ GameObject:
   - component: {fileID: 8784631372371670760}
   - component: {fileID: 2385967880260483396}
   - component: {fileID: 2625127838469603847}
+  - component: {fileID: 222518855143603759}
   m_Layer: 0
   m_Name: Doorway001
   m_TagString: Untagged
@@ -26313,6 +26314,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &222518855143603759
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222518855143603758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4597632380929357411, guid: cc6605f0258d1a2409daef32c0c975a1, type: 3}
 --- !u!1001 &528484735674050723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27011,6 +27026,7 @@ GameObject:
   - component: {fileID: 5798662700295143080}
   - component: {fileID: 6313143263164670106}
   - component: {fileID: 5323679848378424604}
+  - component: {fileID: 7215780617181643734}
   m_Layer: 0
   m_Name: DoorFrame
   m_TagString: Untagged
@@ -27018,6 +27034,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7215780617181643734
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7215780617181643733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6274059880062070182, guid: cc6605f0258d1a2409daef32c0c975a1, type: 3}
 --- !u!4 &8784631372371670760
 Transform:
   m_ObjectHideFlags: 0
