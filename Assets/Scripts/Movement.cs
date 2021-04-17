@@ -258,11 +258,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0,  0, 200, 20), playerVelocity.x.ToString());
-        GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
-        GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
-        GUI.Label(new Rect(0, 45, 200, 20), cameraRotation.angleTarget.ToString());
-    }
+    //private void OnGUI()
+    //{
+       // GUI.Label(new Rect(0,  0, 200, 20), playerVelocity.x.ToString());
+       // GUI.Label(new Rect(0, 15, 200, 20), playerVelocity.y.ToString());
+       // GUI.Label(new Rect(0, 30, 200, 20), playerVelocity.z.ToString());
+       // GUI.Label(new Rect(0, 45, 200, 20), cameraRotation.angleTarget.ToString());
+   // }
 }
