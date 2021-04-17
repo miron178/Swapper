@@ -16,10 +16,5 @@ public class BarsScript : MonoBehaviour
             BarsOpen = !BarsOpen;
             barsObject.GetComponent<Animator>().SetBool("BarsOpen", BarsOpen);
         }
-        if (other.gameObject.tag == "Armoured")
-        {
-            BarsOpen = !BarsOpen;
-            barsObject.GetComponent<Animator>().SetBool("BarsOpen", BarsOpen);
-        }
     }
 }
